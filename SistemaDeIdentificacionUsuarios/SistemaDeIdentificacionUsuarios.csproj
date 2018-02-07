@@ -32,8 +32,37 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="libConnection">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2015\Projects\libConnection\libConnection\bin\Debug\libConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\Metrooo\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.5\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Nffv">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Neurotechnology\FreeFingerprintVerificationSDK 1.0\bin\Win32_x86\Neurotec.Biometrics.Nffv.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,14 +74,68 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AcercaDe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AcercaDe.Designer.cs">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cargando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cargando.Designer.cs">
+      <DependentUpon>Cargando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrador.Designer.cs">
+      <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFOTITO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFOTITO.Designer.cs">
+      <DependentUpon>frmFOTITO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmHuella.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHuella.Designer.cs">
+      <DependentUpon>frmHuella.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AcercaDe.resx">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cargando.resx">
+      <DependentUpon>Cargando.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrador.resx">
+      <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFOTITO.resx">
+      <DependentUpon>frmFOTITO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,7 +144,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="frmHuella.resx">
+      <DependentUpon>frmHuella.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,6 +162,37 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\permiso_administrador.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
+    <None Include="Resources\sublogo.png" />
+    <None Include="Resources\acerca de.png" />
+    <None Include="Resources\broom_stick_3-20.png" />
+    <None Include="Resources\07_plus-161.png" />
+    <None Include="Resources\huellita.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\thin-1570_exit_login_import-16.png" />
+    <None Include="Resources\09_search-16.png" />
+    <None Include="Resources\07_plus-16.png" />
+    <None Include="Resources\trash-01-16.png" />
+    <None Include="Resources\283-16.png" />
+    <None Include="Resources\012_restart-16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
