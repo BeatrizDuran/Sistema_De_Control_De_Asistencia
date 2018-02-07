@@ -181,6 +181,8 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
+    <None Include="Resources\if_free-09_4630171.png" />
+    <None Include="Resources\if_free-09_463017.png" />
     <None Include="Resources\sublogo.png" />
     <None Include="Resources\acerca de.png" />
     <None Include="Resources\broom_stick_3-20.png" />

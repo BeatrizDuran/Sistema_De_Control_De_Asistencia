@@ -30,10 +30,10 @@
         {
             this.cmbCAMARA = new System.Windows.Forms.ComboBox();
             this.btnINICIAR = new System.Windows.Forms.Button();
-            this.pcbFOTO = new System.Windows.Forms.PictureBox();
             this.btnCAPTURAR = new System.Windows.Forms.Button();
-            this.btnSALIR = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSALIR = new System.Windows.Forms.Button();
+            this.pcbFOTO = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFOTO)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,38 +60,17 @@
             this.btnINICIAR.UseVisualStyleBackColor = true;
             this.btnINICIAR.Click += new System.EventHandler(this.btnINICIAR_Click);
             // 
-            // pcbFOTO
-            // 
-            this.pcbFOTO.Location = new System.Drawing.Point(34, 122);
-            this.pcbFOTO.Name = "pcbFOTO";
-            this.pcbFOTO.Size = new System.Drawing.Size(463, 266);
-            this.pcbFOTO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbFOTO.TabIndex = 2;
-            this.pcbFOTO.TabStop = false;
-            // 
             // btnCAPTURAR
             // 
             this.btnCAPTURAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCAPTURAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCAPTURAR.Location = new System.Drawing.Point(34, 394);
+            this.btnCAPTURAR.Location = new System.Drawing.Point(163, 403);
             this.btnCAPTURAR.Name = "btnCAPTURAR";
             this.btnCAPTURAR.Size = new System.Drawing.Size(222, 33);
             this.btnCAPTURAR.TabIndex = 3;
             this.btnCAPTURAR.Text = "Capturar";
             this.btnCAPTURAR.UseVisualStyleBackColor = true;
             this.btnCAPTURAR.Click += new System.EventHandler(this.btnCAPTURAR_Click);
-            // 
-            // btnSALIR
-            // 
-            this.btnSALIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSALIR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSALIR.Location = new System.Drawing.Point(273, 394);
-            this.btnSALIR.Name = "btnSALIR";
-            this.btnSALIR.Size = new System.Drawing.Size(224, 33);
-            this.btnSALIR.TabIndex = 4;
-            this.btnSALIR.Text = "Salir";
-            this.btnSALIR.UseVisualStyleBackColor = true;
-            this.btnSALIR.Click += new System.EventHandler(this.btnSALIR_Click);
             // 
             // label1
             // 
@@ -102,6 +81,29 @@
             this.label1.Size = new System.Drawing.Size(192, 31);
             this.label1.TabIndex = 5;
             this.label1.Text = "Capture la foto";
+            // 
+            // btnSALIR
+            // 
+            this.btnSALIR.FlatAppearance.BorderSize = 0;
+            this.btnSALIR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnSALIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSALIR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSALIR.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.if_free_09_4630171;
+            this.btnSALIR.Location = new System.Drawing.Point(482, 3);
+            this.btnSALIR.Name = "btnSALIR";
+            this.btnSALIR.Size = new System.Drawing.Size(52, 50);
+            this.btnSALIR.TabIndex = 4;
+            this.btnSALIR.UseVisualStyleBackColor = true;
+            this.btnSALIR.Click += new System.EventHandler(this.btnSALIR_Click);
+            // 
+            // pcbFOTO
+            // 
+            this.pcbFOTO.Location = new System.Drawing.Point(34, 122);
+            this.pcbFOTO.Name = "pcbFOTO";
+            this.pcbFOTO.Size = new System.Drawing.Size(463, 266);
+            this.pcbFOTO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbFOTO.TabIndex = 2;
+            this.pcbFOTO.TabStop = false;
             // 
             // frmFOTITO
             // 
@@ -116,7 +118,7 @@
             this.Controls.Add(this.cmbCAMARA);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFOTITO";
-            this.Text = "frmFOTITO";
+            this.Text = "Foto";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmFOTITO_FormClosed);
             this.Load += new System.EventHandler(this.frmFOTITO_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbFOTO)).EndInit();

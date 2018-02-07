@@ -69,6 +69,7 @@
             this.Controls.Add(this.lblCARGANDO);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cargando";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargando";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -143,6 +143,26 @@ namespace SistemaDeIdentificacionUsuarios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_free_09_463017 {
+            get {
+                object obj = ResourceManager.GetObject("if_free-09_463017", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_free_09_4630171 {
+            get {
+                object obj = ResourceManager.GetObject("if_free-09_4630171", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap permiso_administrador {
             get {
                 object obj = ResourceManager.GetObject("permiso_administrador", resourceCulture);
