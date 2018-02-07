@@ -108,5 +108,16 @@ namespace SistemaDeIdentificacionUsuarios
         private void btnINICIAR_Click(object sender, EventArgs e) => btnINICIARmet();
         private void btnCAPTURAR_Click(object sender, EventArgs e) => CapturarFoto();
         private void btnSALIR_Click(object sender, EventArgs e) => this.Close();
+
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    WindowState = FormWindowState.Maximized;
+        //}
+
+        private void btnMINI_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
     }
 }

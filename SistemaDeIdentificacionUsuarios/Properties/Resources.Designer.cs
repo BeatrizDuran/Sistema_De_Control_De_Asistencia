@@ -143,6 +143,16 @@ namespace SistemaDeIdentificacionUsuarios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_00_ELASTOFONT_STORE_READY_close_2703079 {
+            get {
+                object obj = ResourceManager.GetObject("if_00-ELASTOFONT-STORE-READY_close_2703079", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_free_09_463017 {
             get {
                 object obj = ResourceManager.GetObject("if_free-09_463017", resourceCulture);
@@ -156,6 +166,26 @@ namespace SistemaDeIdentificacionUsuarios.Properties {
         internal static System.Drawing.Bitmap if_free_09_4630171 {
             get {
                 object obj = ResourceManager.GetObject("if_free-09_4630171", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_fullscreen_black_280259 {
+            get {
+                object obj = ResourceManager.GetObject("if_fullscreen_black_280259", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_window_minimize_1954552 {
+            get {
+                object obj = ResourceManager.GetObject("if_window-minimize_1954552", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

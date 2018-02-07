@@ -181,6 +181,9 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
+    <None Include="Resources\if_window-minimize_1954552.png" />
+    <None Include="Resources\if_fullscreen_black_280259.png" />
+    <None Include="Resources\if_00-ELASTOFONT-STORE-READY_close_2703079.png" />
     <None Include="Resources\if_free-09_4630171.png" />
     <None Include="Resources\if_free-09_463017.png" />
     <None Include="Resources\sublogo.png" />

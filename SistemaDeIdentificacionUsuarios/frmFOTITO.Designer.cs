@@ -32,6 +32,7 @@
             this.btnINICIAR = new System.Windows.Forms.Button();
             this.btnCAPTURAR = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnMINI = new System.Windows.Forms.Button();
             this.btnSALIR = new System.Windows.Forms.Button();
             this.pcbFOTO = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFOTO)).BeginInit();
@@ -76,11 +77,25 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 22);
+            this.label1.Location = new System.Drawing.Point(28, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(192, 31);
             this.label1.TabIndex = 5;
             this.label1.Text = "Capture la foto";
+            // 
+            // btnMINI
+            // 
+            this.btnMINI.FlatAppearance.BorderSize = 0;
+            this.btnMINI.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnMINI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMINI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMINI.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.if_window_minimize_1954552;
+            this.btnMINI.Location = new System.Drawing.Point(424, 3);
+            this.btnMINI.Name = "btnMINI";
+            this.btnMINI.Size = new System.Drawing.Size(52, 50);
+            this.btnMINI.TabIndex = 7;
+            this.btnMINI.UseVisualStyleBackColor = true;
+            this.btnMINI.Click += new System.EventHandler(this.btnMINI_Click);
             // 
             // btnSALIR
             // 
@@ -88,7 +103,7 @@
             this.btnSALIR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnSALIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSALIR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSALIR.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.if_free_09_4630171;
+            this.btnSALIR.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.if_00_ELASTOFONT_STORE_READY_close_2703079;
             this.btnSALIR.Location = new System.Drawing.Point(482, 3);
             this.btnSALIR.Name = "btnSALIR";
             this.btnSALIR.Size = new System.Drawing.Size(52, 50);
@@ -110,6 +125,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 458);
+            this.Controls.Add(this.btnMINI);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSALIR);
             this.Controls.Add(this.btnCAPTURAR);
@@ -118,6 +134,7 @@
             this.Controls.Add(this.cmbCAMARA);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFOTITO";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Foto";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmFOTITO_FormClosed);
             this.Load += new System.EventHandler(this.frmFOTITO_Load);
@@ -135,5 +152,6 @@
         private System.Windows.Forms.Button btnCAPTURAR;
         private System.Windows.Forms.Button btnSALIR;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnMINI;
     }
 }

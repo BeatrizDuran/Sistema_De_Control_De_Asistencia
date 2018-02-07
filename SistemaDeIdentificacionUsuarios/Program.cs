@@ -16,7 +16,7 @@ namespace SistemaDeIdentificacionUsuarios
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAdministrador());
+            Application.Run(new frmFOTITO());
         }
     }
 }
