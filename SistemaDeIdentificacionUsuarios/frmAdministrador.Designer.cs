@@ -48,8 +48,12 @@
             this.tsbELIMINAR = new System.Windows.Forms.ToolStripButton();
             this.tsbCONSULTAR = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.tsbSALIR = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.idiomasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.españolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbACERCADE = new System.Windows.Forms.ToolStripButton();
+            this.tsbSALIR = new System.Windows.Forms.ToolStripButton();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCONPASSWORD = new System.Windows.Forms.TextBox();
             this.dgvAdmin = new System.Windows.Forms.DataGridView();
@@ -68,10 +72,6 @@
             this.tmrCRONOMETRO = new System.Windows.Forms.Timer(this.components);
             this.pcbIMAGEFINGER = new System.Windows.Forms.PictureBox();
             this.pcbIMAGEFACE = new System.Windows.Forms.PictureBox();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.idiomasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.españolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIMAGEFINGER)).BeginInit();
@@ -215,71 +215,106 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(885, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(885, 28);
             this.toolStrip1.TabIndex = 15;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripButton1
             // 
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripButton1.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources._07_plus_161;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(69, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(86, 25);
             this.toolStripButton1.Text = "Agregar";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // tsbMODIFICAR
             // 
+            this.tsbMODIFICAR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbMODIFICAR.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources._012_restart_16;
             this.tsbMODIFICAR.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbMODIFICAR.Name = "tsbMODIFICAR";
-            this.tsbMODIFICAR.Size = new System.Drawing.Size(78, 22);
+            this.tsbMODIFICAR.Size = new System.Drawing.Size(96, 25);
             this.tsbMODIFICAR.Text = "Modificar";
             this.tsbMODIFICAR.Click += new System.EventHandler(this.tsbMODIFICAR_Click);
             // 
             // tsbELIMINAR
             // 
+            this.tsbELIMINAR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbELIMINAR.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.trash_01_16;
             this.tsbELIMINAR.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbELIMINAR.Name = "tsbELIMINAR";
-            this.tsbELIMINAR.Size = new System.Drawing.Size(70, 22);
+            this.tsbELIMINAR.Size = new System.Drawing.Size(87, 25);
             this.tsbELIMINAR.Text = "Eliminar";
             this.tsbELIMINAR.Click += new System.EventHandler(this.tsbELIMINAR_Click);
             // 
             // tsbCONSULTAR
             // 
+            this.tsbCONSULTAR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbCONSULTAR.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources._09_search_16;
             this.tsbCONSULTAR.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCONSULTAR.Name = "tsbCONSULTAR";
-            this.tsbCONSULTAR.Size = new System.Drawing.Size(78, 22);
+            this.tsbCONSULTAR.Size = new System.Drawing.Size(97, 25);
             this.tsbCONSULTAR.Text = "Consultar";
             this.tsbCONSULTAR.Click += new System.EventHandler(this.tsbCONSULTAR_Click);
             // 
             // toolStripButton2
             // 
+            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripButton2.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.broom_stick_3_20;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(67, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(83, 25);
             this.toolStripButton2.Text = "Limpiar";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
-            // tsbSALIR
+            // toolStripSeparator1
             // 
-            this.tsbSALIR.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.thin_1570_exit_login_import_16;
-            this.tsbSALIR.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSALIR.Name = "tsbSALIR";
-            this.tsbSALIR.Size = new System.Drawing.Size(49, 22);
-            this.tsbSALIR.Text = "Salir";
-            this.tsbSALIR.Click += new System.EventHandler(this.tsbSALIR_Click);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStripButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.idiomasToolStripMenuItem,
+            this.españolToolStripMenuItem});
+            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(71, 25);
+            this.toolStripButton3.Text = "Idioma";
+            // 
+            // idiomasToolStripMenuItem
+            // 
+            this.idiomasToolStripMenuItem.Name = "idiomasToolStripMenuItem";
+            this.idiomasToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.idiomasToolStripMenuItem.Text = "Español";
+            // 
+            // españolToolStripMenuItem
+            // 
+            this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
+            this.españolToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.españolToolStripMenuItem.Text = "Ingles";
             // 
             // tsbACERCADE
             // 
+            this.tsbACERCADE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbACERCADE.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.acerca_de;
             this.tsbACERCADE.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbACERCADE.Name = "tsbACERCADE";
-            this.tsbACERCADE.Size = new System.Drawing.Size(79, 22);
+            this.tsbACERCADE.Size = new System.Drawing.Size(97, 25);
             this.tsbACERCADE.Text = "Acerca de";
+            // 
+            // tsbSALIR
+            // 
+            this.tsbSALIR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbSALIR.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.thin_1570_exit_login_import_16;
+            this.tsbSALIR.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSALIR.Name = "tsbSALIR";
+            this.tsbSALIR.Size = new System.Drawing.Size(61, 25);
+            this.tsbSALIR.Text = "Salir";
+            this.tsbSALIR.Click += new System.EventHandler(this.tsbSALIR_Click);
             // 
             // label7
             // 
@@ -437,34 +472,6 @@
             this.pcbIMAGEFACE.TabIndex = 13;
             this.pcbIMAGEFACE.TabStop = false;
             this.pcbIMAGEFACE.Click += new System.EventHandler(this.pcbIMAGEFACE_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStripButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.idiomasToolStripMenuItem,
-            this.españolToolStripMenuItem});
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(57, 22);
-            this.toolStripButton3.Text = "Idioma";
-            // 
-            // idiomasToolStripMenuItem
-            // 
-            this.idiomasToolStripMenuItem.Name = "idiomasToolStripMenuItem";
-            this.idiomasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.idiomasToolStripMenuItem.Text = "Español";
-            // 
-            // españolToolStripMenuItem
-            // 
-            this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
-            this.españolToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.españolToolStripMenuItem.Text = "Ingles";
-            this.españolToolStripMenuItem.Click += new System.EventHandler(this.españolToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // frmAdministrador
             // 

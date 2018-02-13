@@ -19,13 +19,25 @@ namespace SistemaDeIdentificacionUsuarios
         }
         MySqlCommand com;
         MySqlConnection con;
-        MySqlDataAdapter ad;
         public static string user, password;
-        private void btnACCEDER_Click(object sender, EventArgs e)
+        public static Image foto;
+        public static frmLogin _instance;
+        public frmLogin instance
         {
-           con= new MySqlConnection( "server=127.0.0.1;database=integradora2;user=root;password=siqueirosuth19");
+            get
+            {
+                if (frmLogin._instance == null)
+                {
+                    frmLogin._instance = new frmLogin();
+                }
+                return frmLogin._instance;
+            }
+        }
+        private void ACCEDER()
+        {
+            con = new MySqlConnection("server=127.0.0.1;database=integradora2;user=root;password=siqueirosuth19");
             con.Open();
-            string query = "SELECT * FROM users WHERE email_users='"+txtUSUARIO.Text+"' AND password_users=md5('"+txtPASSWORD.Text+"'); ";
+            string query = "SELECT * FROM users WHERE email_users='" + txtUSUARIO.Text + "' AND password_users=md5('" + txtPASSWORD.Text + "'); ";
             com = new MySqlCommand(query, con);
             MySqlDataReader lector = com.ExecuteReader();
             if (!lector.HasRows)
@@ -38,32 +50,15 @@ namespace SistemaDeIdentificacionUsuarios
                     password = lector.GetString(5);
                     if (lector.GetString(6) == "1")
                     {
+                       frmAdministrador a= new frmAdministrador(foto);
+                        a.instance.Show();
                         this.Hide();
-                        new frmAdministrador().ShowDialog();
-                        this.Show();
                     }
                 }
-            }           
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
+            }
 
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPASSWORD_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void btnACCEDER_Click(object sender, EventArgs e) => ACCEDER();
+        private void button1_Click(object sender, EventArgs e) => this.Close();
     }
 }

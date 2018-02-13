@@ -38,9 +38,13 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -66,7 +70,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(435, 13);
+            this.label1.Location = new System.Drawing.Point(400, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 39);
             this.label1.TabIndex = 2;
@@ -76,7 +80,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(435, 89);
+            this.label2.Location = new System.Drawing.Point(400, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 39);
             this.label2.TabIndex = 3;
@@ -86,7 +90,7 @@
             // 
             this.lblHORA.AutoSize = true;
             this.lblHORA.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHORA.Location = new System.Drawing.Point(435, 52);
+            this.lblHORA.Location = new System.Drawing.Point(400, 67);
             this.lblHORA.Name = "lblHORA";
             this.lblHORA.Size = new System.Drawing.Size(29, 39);
             this.lblHORA.TabIndex = 4;
@@ -96,7 +100,7 @@
             // 
             this.lblFECHA.AutoSize = true;
             this.lblFECHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFECHA.Location = new System.Drawing.Point(435, 128);
+            this.lblFECHA.Location = new System.Drawing.Point(400, 143);
             this.lblFECHA.Name = "lblFECHA";
             this.lblFECHA.Size = new System.Drawing.Size(29, 39);
             this.lblFECHA.TabIndex = 5;
@@ -119,25 +123,54 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(2, 38);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(895, 188);
+            this.panel1.Size = new System.Drawing.Size(930, 204);
             this.panel1.TabIndex = 6;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(213, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(212, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(170, 163);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(329, 264);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(687, 39);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Bienvenid@, por favor de escanea tu huella";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Location = new System.Drawing.Point(2, 16);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(930, 32);
+            this.panel2.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel3.Location = new System.Drawing.Point(0, 17);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(930, 15);
+            this.panel3.TabIndex = 11;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(909, 367);
+            this.ClientSize = new System.Drawing.Size(959, 463);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -151,6 +184,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,6 +201,9 @@
         private System.Windows.Forms.Label lblFECHA;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

@@ -35,6 +35,7 @@
             this.btnMINI = new System.Windows.Forms.Button();
             this.btnSALIR = new System.Windows.Forms.Button();
             this.pcbFOTO = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFOTO)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +45,7 @@
             this.cmbCAMARA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCAMARA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCAMARA.FormattingEnabled = true;
-            this.cmbCAMARA.Location = new System.Drawing.Point(34, 72);
+            this.cmbCAMARA.Location = new System.Drawing.Point(34, 120);
             this.cmbCAMARA.Name = "cmbCAMARA";
             this.cmbCAMARA.Size = new System.Drawing.Size(341, 28);
             this.cmbCAMARA.TabIndex = 0;
@@ -53,7 +54,7 @@
             // 
             this.btnINICIAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnINICIAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnINICIAR.Location = new System.Drawing.Point(381, 72);
+            this.btnINICIAR.Location = new System.Drawing.Point(381, 119);
             this.btnINICIAR.Name = "btnINICIAR";
             this.btnINICIAR.Size = new System.Drawing.Size(116, 28);
             this.btnINICIAR.TabIndex = 1;
@@ -65,7 +66,7 @@
             // 
             this.btnCAPTURAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCAPTURAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCAPTURAR.Location = new System.Drawing.Point(163, 403);
+            this.btnCAPTURAR.Location = new System.Drawing.Point(163, 426);
             this.btnCAPTURAR.Name = "btnCAPTURAR";
             this.btnCAPTURAR.Size = new System.Drawing.Size(222, 33);
             this.btnCAPTURAR.TabIndex = 3;
@@ -77,7 +78,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 9);
+            this.label1.Location = new System.Drawing.Point(167, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(192, 31);
             this.label1.TabIndex = 5;
@@ -113,18 +114,29 @@
             // 
             // pcbFOTO
             // 
-            this.pcbFOTO.Location = new System.Drawing.Point(34, 122);
+            this.pcbFOTO.Location = new System.Drawing.Point(34, 154);
             this.pcbFOTO.Name = "pcbFOTO";
             this.pcbFOTO.Size = new System.Drawing.Size(463, 266);
             this.pcbFOTO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbFOTO.TabIndex = 2;
             this.pcbFOTO.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(30, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(184, 24);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Escoge una cámara:";
+            // 
             // frmFOTITO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 458);
+            this.ClientSize = new System.Drawing.Size(536, 481);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnMINI);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSALIR);
@@ -153,5 +165,6 @@
         private System.Windows.Forms.Button btnSALIR;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMINI;
+        private System.Windows.Forms.Label label2;
     }
 }

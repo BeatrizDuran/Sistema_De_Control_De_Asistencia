@@ -41,6 +41,26 @@
     <Reference Include="AForge.Video.DirectShow">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="DPFPDevNET, Version=1.4.0.1, Culture=neutral, PublicKeyToken=696774c42ee28c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Solucion FPP\FPP\bin\Debug\DPFPDevNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPEngNET, Version=1.4.0.1, Culture=neutral, PublicKeyToken=7fe76e7adf19964b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Solucion FPP\FPP\bin\Debug\DPFPEngNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPGuiNET, Version=1.4.0.1, Culture=neutral, PublicKeyToken=d4f4a0bd9c559145, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Solucion FPP\FPP\bin\Debug\DPFPGuiNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPShrNET, Version=1.4.0.1, Culture=neutral, PublicKeyToken=d902fe275a8d6cf2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Solucion FPP\FPP\bin\Debug\DPFPShrNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPVerNET, Version=1.4.0.1, Culture=neutral, PublicKeyToken=4de0a9c4dcc83984, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Solucion FPP\FPP\bin\Debug\DPFPVerNET.dll</HintPath>
+    </Reference>
     <Reference Include="libConnection">
       <HintPath>..\..\..\..\Documents\Visual Studio 2015\Projects\libConnection\libConnection\bin\Debug\libConnection.dll</HintPath>
     </Reference>
@@ -80,12 +100,6 @@
     <Compile Include="AcercaDe.Designer.cs">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cargando.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cargando.Designer.cs">
-      <DependentUpon>Cargando.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,9 +134,6 @@
     </Compile>
     <EmbeddedResource Include="AcercaDe.resx">
       <DependentUpon>AcercaDe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cargando.resx">
-      <DependentUpon>Cargando.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrador.resx">
       <DependentUpon>frmAdministrador.cs</DependentUpon>

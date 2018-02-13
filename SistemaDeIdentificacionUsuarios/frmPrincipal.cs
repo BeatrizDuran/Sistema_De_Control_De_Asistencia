@@ -16,6 +16,19 @@ namespace SistemaDeIdentificacionUsuarios
         {
             InitializeComponent();
         }
+        public static frmPrincipal _instance;
+        public frmPrincipal instance
+        {
+            get
+            {
+                if (frmPrincipal._instance == null)
+                {
+                    frmPrincipal._instance = new frmPrincipal();
+                }
+                return frmPrincipal._instance;
+            }
+        }
+
         private void loginToolStripMenuItem_Click(object sender, EventArgs e) => new frmLogin().ShowDialog();
         private void timer1_Tick(object sender, EventArgs e)
         {
