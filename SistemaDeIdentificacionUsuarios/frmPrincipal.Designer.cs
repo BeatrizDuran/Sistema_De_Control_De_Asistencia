@@ -40,11 +40,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -149,19 +147,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(2, 16);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(930, 32);
             this.panel2.TabIndex = 11;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel3.Location = new System.Drawing.Point(0, 17);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(930, 15);
-            this.panel3.TabIndex = 11;
             // 
             // frmPrincipal
             // 
@@ -184,7 +173,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,7 +191,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
     }
 }
 

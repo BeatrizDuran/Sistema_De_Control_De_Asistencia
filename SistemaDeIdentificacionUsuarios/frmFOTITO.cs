@@ -100,20 +100,23 @@ namespace SistemaDeIdentificacionUsuarios
         }
         private void CapturarFoto()
         {
-            try
+            if (pcbFOTO == null)
             {
-                if (File.Exists(ruta))
-                    File.Delete(ruta);
-                else
-                //error con el path con las diagonales.
-              pcbFOTO.BackgroundImage.Save(ruta, ImageFormat.Jpeg);
-                //ruta = ruta.Replace(@"\\", @"\");
-                new frmAdministrador(foto).ShowDialog();
+                MessageBox.Show("No hay una imagen","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-            catch (Exception error)
+            else
             {
-                CerrarVideo();
-                MessageBox.Show(error.ToString());
+                try
+                {
+                    //pBfoto.BackgroundImage.Save(@"C:\Users\monta\Desktop\prueba.jpeg", ImageFormat.Jpeg); 
+                    pcbFOTO.Image = foto;
+                    frmAdministrador admin = new frmAdministrador(foto);
+                    admin.Show();
+                }
+                catch (Exception Error)
+                {
+                    MessageBox.Show(Error.ToString());
+                }
             }
         }
 
@@ -124,32 +127,32 @@ namespace SistemaDeIdentificacionUsuarios
         }
         private void frmFOTITO_Load(object sender, EventArgs e)
         {
-           // ListarCamaras();
-            // Cargamos los dispositivos de video
-            filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+           ListarCamaras();
+           // // Cargamos los dispositivos de video
+           // filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 
-            //// Y por cada dispositivo detectado, lo agregamos a un combobox (ahora ya no es visible para el usuario)
-            foreach (FilterInfo Dispositivo in filter)
-            {
-                cmbCAMARA.Items.Add(Dispositivo.Name);
-            }
-            //// Seleccionamos el primer dispositivo
-            cmbCAMARA.SelectedIndex = 0;
-            //// Inicializamos el dispositivo
-            video = new VideoCaptureDevice();
+           // //// Y por cada dispositivo detectado, lo agregamos a un combobox (ahora ya no es visible para el usuario)
+           // foreach (FilterInfo Dispositivo in filter)
+           // {
+           //     cmbCAMARA.Items.Add(Dispositivo.Name);
+           // }
+           // //// Seleccionamos el primer dispositivo
+           // cmbCAMARA.SelectedIndex = 0;
+           // //// Inicializamos el dispositivo
+           // video = new VideoCaptureDevice();
 
-            //// Y creamos el handler para comenzar a hacer el stream de video
-            try
-            {
-                video = new VideoCaptureDevice(filter[cmbCAMARA.SelectedIndex].MonikerString);
-                video.NewFrame += FrameFinal_NewFrame;
+           // //// Y creamos el handler para comenzar a hacer el stream de video
+           // try
+           // {
+           //     video = new VideoCaptureDevice(filter[cmbCAMARA.SelectedIndex].MonikerString);
+           //     video.NewFrame += FrameFinal_NewFrame;
 
-                video.Start();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           //     video.Start();
+           // }
+           // catch (Exception ex)
+           // {
+           //     MessageBox.Show(ex.Message);
+           // }
         }
         private void frmFOTITO_FormClosed(object sender, FormClosedEventArgs e) => CerrarVideo();
         private void btnINICIAR_Click(object sender, EventArgs e)

@@ -20,13 +20,16 @@ namespace SistemaDeIdentificacionUsuarios
         {
             InitializeComponent();
         }
-       public static Image foto;
         MySqlCommand com;
         MySqlDataReader lector;
         string rutaFace;
         string rutaFinger;
+        public static Image foto;
+        public static Image huellita;
+        public static PictureBox pic = null;
         MySqlConnection con = new MySqlConnection("server=127.0.0.1;database=integradora2;user=root;password=siqueirosuth19");
         public static frmAdministrador _instance;
+        Registro_de_huella huella = new Registro_de_huella();
         public frmAdministrador instance
         {
             get
@@ -38,7 +41,6 @@ namespace SistemaDeIdentificacionUsuarios
                 return frmAdministrador._instance;
             }
         }
-
         private void limpiar()
         {
             txtAPELLIDO1.Clear();
@@ -80,6 +82,8 @@ namespace SistemaDeIdentificacionUsuarios
         {
             try
             {
+                // igualar picture box
+                pcbIMAGEFACE.Image = foto;
                 dgvAdmin.Rows.Clear();
                 con.Open();
                 string query = "SELECT * FROM users";
@@ -99,15 +103,15 @@ namespace SistemaDeIdentificacionUsuarios
                 MessageBox.Show(errorcito.ToString());
             }
            
-           pcbIMAGEFACE.Image = frmFOTITO.foto = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Documentos\ImagenRostro\Rostro.jpeg");
-           Timer ti = new Timer();
-            ti.Interval = 5000;
-            ti.Tick += (s, a) => {
-                ((Timer)s).Stop();
-                pcbIMAGEFACE.Image = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Imágenes\user.png");
-                pcbIMAGEFINGER.Image = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Imágenes\huellita.png");
-            };
-            ti.Start();
+          pcbIMAGEFACE.Image = frmFOTITO.foto = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Documentos\ImagenRostro\Rostro.jpeg");
+           //Timer ti = new Timer();
+           // ti.Interval = 5000;
+           // ti.Tick += (s, a) => {
+           //     ((Timer)s).Stop();
+           //     pcbIMAGEFACE.Image = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Imágenes\user.png");
+           //     pcbIMAGEFINGER.Image = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Imágenes\huellita.png");
+           // };
+           // ti.Start();
             // pcbIMAGEFINGER.Image = Registro_de_huella.fotohuella = Image.FromFile(@"C:\Users\BeatrizDuran\Documents\ImagenHuella.jpeg");
         }
         private void consultar()
@@ -180,7 +184,7 @@ namespace SistemaDeIdentificacionUsuarios
         }
         private void pcbIMAGEFACE_Click(object sender, EventArgs e)
         {
-           frmFOTITO a = new frmFOTITO();
+            frmFOTITO a = new frmFOTITO();
             a.instance.Show();
             this.Hide();
         }

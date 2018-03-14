@@ -132,6 +132,12 @@
     <Compile Include="frmHuella.Designer.cs">
       <DependentUpon>frmHuella.cs</DependentUpon>
     </Compile>
+    <Compile Include="PruebaHuellita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PruebaHuellita.Designer.cs">
+      <DependentUpon>PruebaHuellita.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AcercaDe.resx">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +165,9 @@
     </Compile>
     <EmbeddedResource Include="frmHuella.resx">
       <DependentUpon>frmHuella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PruebaHuellita.resx">
+      <DependentUpon>PruebaHuellita.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

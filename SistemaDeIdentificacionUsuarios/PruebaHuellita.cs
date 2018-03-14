@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,38 +10,21 @@ using System.Windows.Forms;
 using Neurotec.Biometrics;
 using DPFP;
 using System.IO;
+using MySql.Data.MySqlClient;
 
 
 namespace SistemaDeIdentificacionUsuarios
 {
-    public partial class Registro_de_huella : Form, DPFP.Capture.EventHandler {
-
-       
-        public Registro_de_huella()
+    public partial class PruebaHuellita : Form, DPFP.Capture.EventHandler
+    {
+        public PruebaHuellita()
         {
             InitializeComponent();
         }
-        public void imagen()
-        {
-            pcbHUELLA.ToString();
-        }
-        // Variables Globales, requeridas por el SDK
         public delegate void OnTemplateEventHandler(DPFP.Template template);
         public static Image foto;
         public event OnTemplateEventHandler OnTemplate;
         private DPFP.Processing.Enrollment Enroller;
-        public static Registro_de_huella _instance;
-        public Registro_de_huella instance
-        {
-            get
-            {
-                if (Registro_de_huella._instance == null)
-                {
-                    Registro_de_huella._instance = new Registro_de_huella();
-                }
-                return Registro_de_huella._instance;
-            }
-        }
 
         // Variable Global donde se almacena la huella escaneada. "Template" es una clase del SDK
         Template plantilla;
@@ -96,8 +78,8 @@ namespace SistemaDeIdentificacionUsuarios
             {
                 //MessageBox.Show("Huella escaneada satisfactoriamente!", "Escanéo satisfactorio", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //btnRegistrarVisitante.Invoke(new MethodInvoker(delegate { btnRegistrarVisitante.Enabled = true; }));
-                btnREGISTRAR.Invoke(new MethodInvoker(delegate { btnREGISTRAR.Enabled = true; }));
-                lblEstatus.Invoke(new MethodInvoker(delegate { lblEstatus.Text = "Escaneo Satisfactorio"; }));
+                btnGUARDAR.Invoke(new MethodInvoker(delegate { btnGUARDAR.Enabled = true; }));
+                //lblEstatus.Invoke(new MethodInvoker(delegate { lblEstatus.Text = "Escaneo Satisfactorio"; }));
             }
 
             this.Invoke(new MethodInvoker(delegate {
@@ -117,6 +99,7 @@ namespace SistemaDeIdentificacionUsuarios
             // Convierte la muestra "Sample" a imagen, y la muestra en el picturebox. (Esta es la imagen de la huella como tal)
             DrawPicture(ConvertSampleToBitmap(Sample));
         }
+
         protected void Start()
         {
             // Inicia la captura de la huella digital
@@ -178,16 +161,6 @@ namespace SistemaDeIdentificacionUsuarios
                 MakeReport("The quality of the fingerprint sample is poor.");
         }
 
-        // Convierte el Sample a imagen y la devuelve.
-        // Esto permite mostrarla en el Picturebox
-        protected Bitmap ConvertSampleToBitmap(DPFP.Sample Sample)
-        {
-            DPFP.Capture.SampleConversion Convertor = new DPFP.Capture.SampleConversion();	// Create a sample convertor.
-            Bitmap bitmap = null;												            // TODO: the size doesn't matter
-            Convertor.ConvertToPicture(Sample, ref bitmap);									// TODO: return bitmap as a result
-            return bitmap;
-        }
-
         // Este método es propia del SDK, obtiene ciertos puntos clave de la huella digital que la convierte en unica
         // y genera algo llamado "Features" o "Caracteristicas", con ellas se hace la comparativa con otras huellas.
         protected DPFP.FeatureSet ExtractFeatures(DPFP.Sample Sample, DPFP.Processing.DataPurpose Purpose)
@@ -218,7 +191,7 @@ namespace SistemaDeIdentificacionUsuarios
         }
         private void DrawPicture(Bitmap bitmap)
         {
-           pcbHUELLA.Invoke(new MethodInvoker(delegate { pcbHUELLA.Image = new Bitmap(bitmap, pcbHUELLA.Size); }));
+            pcbFOTOPRUEBA.Invoke(new MethodInvoker(delegate { pcbFOTOPRUEBA.Image = new Bitmap(bitmap, pcbFOTOPRUEBA.Size); }));
         }
 
         private DPFP.Capture.Capture Capturer;
@@ -278,46 +251,35 @@ namespace SistemaDeIdentificacionUsuarios
                     }
                 }
         }
-        //METODO PARA HACER EL HASH .... EN PROCESO
-        protected Bitmap ConvertSampleToBitma(DPFP.Sample Sample)
+        protected Bitmap ConvertSampleToBitmap(DPFP.Sample Sample)
         {
             DPFP.Capture.SampleConversion Convertor = new DPFP.Capture.SampleConversion();	// Create a sample convertor.
             Bitmap bitmap = null;												            // TODO: the size doesn't matter
             Convertor.ConvertToPicture(Sample, ref bitmap);									// TODO: return bitmap as a result
             return bitmap;
         }
-        private void btnVERIFICAR_Click(object sender, EventArgs e)
+
+        private void btnGUARDAR_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Aun no funciona");
+            // Me quede en lo del guardado de la huella dactilar... en la base de datos
+            MySqlConnection con = new MySqlConnection("server=localhost;password=siqueirosuth19;database=Prueba;user=root");
+            con.Open();
+            MySqlCommand comd = new MySqlCommand("INSERT INTO DatosHuella(Nombre, Huella) VALUES (?,?)");
+            comd.Parameters.AddWithValue("Nombre",txtNOMBRE.Text.ToString());
+            using (MemoryStream  ms = new MemoryStream(plantilla.Bytes) )
+            {
+                comd.Parameters.AddWithValue("Huella", ms.ToArray());
+               
+            }
+            comd.ExecuteNonQuery();
+            comd.Dispose();
+            con.Close();
         }
-        private void button1_Click(object sender, EventArgs e) => this.Close();
-        private void Registro_de_huella_Load(object sender, EventArgs e)
+
+        private void PruebaHuellita_Load(object sender, EventArgs e)
         {
             Init();
             Start();
-        }
-        private void btnREGISTRAR_Click(object sender, EventArgs e)
-        {
-
-            //frmAdministrador frmAdministrador = new frmAdministrador(foto);
-            //frmAdministrador.Controls.Add(pcbHUELLA);
-            //frmAdministrador.Show();
-            //try
-            //{
-            //    if (File.Exists(@"C:\Users\BeatrizDuran\Documents\ImagenHuella.jpeg"))
-            //    {
-            //        File.Delete(@"C:\Users\BeatrizDuran\Documents\ImagenHuella.jpeg");
-            //    }
-            //    else
-            //    {
-            //        pcbHUELLA.BackgroundImage.Save(@"C:\Users\BeatrizDuran\Documents\ImagenHuella.jpeg", ImageFormat.Jpeg);
-            //        new frmAdministrador(fotohuella).ShowDialog();
-            //    }
-            //}
-            //  catch (Exception error)
-            //  {
-            //      MessageBox.Show(error.ToString());
-            //  }
         }
     }
 }
