@@ -34,11 +34,10 @@
             this.pcbHUELLA = new System.Windows.Forms.PictureBox();
             this.btnREGISTRAR = new System.Windows.Forms.Button();
             this.StatusLine = new System.Windows.Forms.Label();
-            this.Prompt = new System.Windows.Forms.TextBox();
-            this.StatusText = new System.Windows.Forms.TextBox();
             this.pbMuestras = new System.Windows.Forms.ProgressBar();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblEstatus = new System.Windows.Forms.Label();
+            this.Prompt = new System.Windows.Forms.Label();
+            this.StatusText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHUELLA)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +55,7 @@
             // 
             this.btnVERIFICAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVERIFICAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVERIFICAR.Location = new System.Drawing.Point(157, 360);
+            this.btnVERIFICAR.Location = new System.Drawing.Point(157, 437);
             this.btnVERIFICAR.Name = "btnVERIFICAR";
             this.btnVERIFICAR.Size = new System.Drawing.Size(132, 39);
             this.btnVERIFICAR.TabIndex = 2;
@@ -91,7 +90,7 @@
             // 
             this.btnREGISTRAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnREGISTRAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnREGISTRAR.Location = new System.Drawing.Point(31, 360);
+            this.btnREGISTRAR.Location = new System.Drawing.Point(31, 437);
             this.btnREGISTRAR.Name = "btnREGISTRAR";
             this.btnREGISTRAR.Size = new System.Drawing.Size(127, 39);
             this.btnREGISTRAR.TabIndex = 4;
@@ -103,24 +102,11 @@
             // 
             this.StatusLine.AutoSize = true;
             this.StatusLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatusLine.Location = new System.Drawing.Point(40, 369);
+            this.StatusLine.Location = new System.Drawing.Point(84, 334);
             this.StatusLine.Name = "StatusLine";
-            this.StatusLine.Size = new System.Drawing.Size(0, 20);
+            this.StatusLine.Size = new System.Drawing.Size(17, 20);
             this.StatusLine.TabIndex = 5;
-            // 
-            // Prompt
-            // 
-            this.Prompt.Location = new System.Drawing.Point(323, 198);
-            this.Prompt.Name = "Prompt";
-            this.Prompt.Size = new System.Drawing.Size(100, 20);
-            this.Prompt.TabIndex = 6;
-            // 
-            // StatusText
-            // 
-            this.StatusText.Location = new System.Drawing.Point(328, 310);
-            this.StatusText.Name = "StatusText";
-            this.StatusText.Size = new System.Drawing.Size(100, 20);
-            this.StatusText.TabIndex = 7;
+            this.StatusLine.Text = "..";
             // 
             // pbMuestras
             // 
@@ -130,35 +116,44 @@
             this.pbMuestras.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.pbMuestras.TabIndex = 93;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(57, 325);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 20);
-            this.label2.TabIndex = 94;
-            this.label2.Text = "...";
-            // 
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
             this.lblEstatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstatus.Location = new System.Drawing.Point(280, 334);
+            this.lblEstatus.Location = new System.Drawing.Point(42, 333);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(0, 21);
             this.lblEstatus.TabIndex = 95;
+            // 
+            // Prompt
+            // 
+            this.Prompt.AutoSize = true;
+            this.Prompt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prompt.Location = new System.Drawing.Point(27, 366);
+            this.Prompt.Name = "Prompt";
+            this.Prompt.Size = new System.Drawing.Size(17, 20);
+            this.Prompt.TabIndex = 96;
+            this.Prompt.Text = "..";
+            // 
+            // StatusText
+            // 
+            this.StatusText.AutoSize = true;
+            this.StatusText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusText.Location = new System.Drawing.Point(27, 403);
+            this.StatusText.Name = "StatusText";
+            this.StatusText.Size = new System.Drawing.Size(17, 20);
+            this.StatusText.TabIndex = 97;
+            this.StatusText.Text = "..";
             // 
             // Registro_de_huella
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 421);
-            this.Controls.Add(this.lblEstatus);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pbMuestras);
+            this.ClientSize = new System.Drawing.Size(328, 493);
             this.Controls.Add(this.StatusText);
             this.Controls.Add(this.Prompt);
+            this.Controls.Add(this.lblEstatus);
+            this.Controls.Add(this.pbMuestras);
             this.Controls.Add(this.StatusLine);
             this.Controls.Add(this.btnREGISTRAR);
             this.Controls.Add(this.button1);
@@ -184,10 +179,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnREGISTRAR;
         private System.Windows.Forms.Label StatusLine;
-        private System.Windows.Forms.TextBox Prompt;
-        private System.Windows.Forms.TextBox StatusText;
         private System.Windows.Forms.ProgressBar pbMuestras;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEstatus;
+        private System.Windows.Forms.Label Prompt;
+        private System.Windows.Forms.Label StatusText;
     }
 }

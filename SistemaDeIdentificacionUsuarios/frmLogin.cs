@@ -50,7 +50,7 @@ namespace SistemaDeIdentificacionUsuarios
                     password = lector.GetString(5);
                     if (lector.GetString(6) == "1")
                     {
-                       frmAdministrador a= new frmAdministrador(foto);
+                       frmAdministrador a= new frmAdministrador();
                         a.instance.Show();
                         this.Hide();
                     }

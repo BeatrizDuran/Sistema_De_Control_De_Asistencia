@@ -16,7 +16,7 @@ namespace SistemaDeIdentificacionUsuarios
 {
     public partial class frmAdministrador : Form
     {
-        public frmAdministrador(Image foto)
+        public frmAdministrador()
         {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace SistemaDeIdentificacionUsuarios
             {
                 if (frmAdministrador._instance == null)
                 {
-                    frmAdministrador._instance = new frmAdministrador(foto);
+                    frmAdministrador._instance = new frmAdministrador();
                 }
                 return frmAdministrador._instance;
             }
@@ -82,7 +82,7 @@ namespace SistemaDeIdentificacionUsuarios
         {
             try
             {
-                // igualar picture box
+                //huella.plantilla = pcbIMAGEFINGER.Image;
                 pcbIMAGEFACE.Image = foto;
                 dgvAdmin.Rows.Clear();
                 con.Open();
@@ -130,6 +130,26 @@ namespace SistemaDeIdentificacionUsuarios
             com = new MySqlCommand(query, con);
             lector = com.ExecuteReader();
             con.Close();
+        }
+
+        protected Bitmap ConvertSampleToBitmap(DPFP.Sample Sample)
+        {
+            DPFP.Capture.SampleConversion Convertor = new DPFP.Capture.SampleConversion();	// Create a sample convertor.
+            Bitmap bitmap = null;												            // TODO: the size doesn't matter
+            Convertor.ConvertToPicture(Sample, ref bitmap);									// TODO: return bitmap as a result
+            return bitmap;
+        }
+        protected virtual void ProcesarMuestra(DPFP.Sample Sample)
+        {
+            // Este evento es llamado automaticamente por el SDK cada que se pase el dedo por el escaner
+            // En total, se manda a llamar 4 veces, las 4 veces requeridas por el SDK para generar el template.
+
+            // Convierte la muestra "Sample" a imagen, y la muestra en el picturebox. (Esta es la imagen de la huella como tal)
+            DrawPicture(ConvertSampleToBitmap(Sample));
+        }
+        private void DrawPicture(Bitmap bitmap)
+        {
+            pcbIMAGEFINGER.Invoke(new MethodInvoker(delegate { pcbIMAGEFINGER.Image = new Bitmap(bitmap, pcbIMAGEFINGER.Size); }));
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

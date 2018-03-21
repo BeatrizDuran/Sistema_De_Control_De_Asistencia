@@ -110,7 +110,7 @@ namespace SistemaDeIdentificacionUsuarios
                 {
                     //pBfoto.BackgroundImage.Save(@"C:\Users\monta\Desktop\prueba.jpeg", ImageFormat.Jpeg); 
                     pcbFOTO.Image = foto;
-                    frmAdministrador admin = new frmAdministrador(foto);
+                    frmAdministrador admin = new frmAdministrador();
                     admin.Show();
                 }
                 catch (Exception Error)
