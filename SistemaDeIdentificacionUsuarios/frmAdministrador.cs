@@ -20,16 +20,24 @@ namespace SistemaDeIdentificacionUsuarios
         {
             InitializeComponent();
         }
-        MySqlCommand com;
+        #region Declaración de variables
+        //Conexión a Mysql
+        MySqlConnection con = new MySqlConnection("server=127.0.0.1;database=integradora2;user=root;password=siqueirosuth19");
         MySqlDataReader lector;
+        MySqlCommand com;
         string rutaFace;
         string rutaFinger;
-        public static Image foto;
         public static Image huellita;
-        public static PictureBox pic = null;
-        MySqlConnection con = new MySqlConnection("server=127.0.0.1;database=integradora2;user=root;password=siqueirosuth19");
-        public static frmAdministrador _instance;
+        public static PictureBox pic;
+        #endregion
+
         Registro_de_huella huella = new Registro_de_huella();
+
+        #region Método singleton
+        // Variable la cual se utiliza en el método de frmAdministrador instance.
+        public static frmAdministrador _instance;
+        
+        //Este método permite no abrir más de una vez la ventana.
         public frmAdministrador instance
         {
             get
@@ -41,6 +49,10 @@ namespace SistemaDeIdentificacionUsuarios
                 return frmAdministrador._instance;
             }
         }
+        #endregion
+
+        //Métodos que realizan las operaciones básicas para registrar a los usuarios, realizar modificaciones
+        //como eliminaciones y consultas.
         private void limpiar()
         {
             txtAPELLIDO1.Clear();
@@ -83,7 +95,7 @@ namespace SistemaDeIdentificacionUsuarios
             try
             {
                 //huella.plantilla = pcbIMAGEFINGER.Image;
-                pcbIMAGEFACE.Image = foto;
+                //pcbIMAGEFACE.Image = pic;
                 dgvAdmin.Rows.Clear();
                 con.Open();
                 string query = "SELECT * FROM users";
@@ -97,23 +109,13 @@ namespace SistemaDeIdentificacionUsuarios
                        Image.FromFile(lector.GetString(7)),Image.FromFile(lector.GetString(8)));
                 }
                     con.Close();
-            }
+                   // pcbIMAGEFACE.Image = frmFOTITO.foto = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Documentos\ImagenRostro\Rostro.jpeg");
+             }
             catch (MySqlException errorcito)
             {
                 MessageBox.Show(errorcito.ToString());
             }
-           
-          pcbIMAGEFACE.Image = frmFOTITO.foto = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Documentos\ImagenRostro\Rostro.jpeg");
-           //Timer ti = new Timer();
-           // ti.Interval = 5000;
-           // ti.Tick += (s, a) => {
-           //     ((Timer)s).Stop();
-           //     pcbIMAGEFACE.Image = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Imágenes\user.png");
-           //     pcbIMAGEFINGER.Image = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Imágenes\huellita.png");
-           // };
-           // ti.Start();
-            // pcbIMAGEFINGER.Image = Registro_de_huella.fotohuella = Image.FromFile(@"C:\Users\BeatrizDuran\Documents\ImagenHuella.jpeg");
-        }
+           }
         private void consultar()
         {
             con.Open();
@@ -131,27 +133,7 @@ namespace SistemaDeIdentificacionUsuarios
             lector = com.ExecuteReader();
             con.Close();
         }
-
-        protected Bitmap ConvertSampleToBitmap(DPFP.Sample Sample)
-        {
-            DPFP.Capture.SampleConversion Convertor = new DPFP.Capture.SampleConversion();	// Create a sample convertor.
-            Bitmap bitmap = null;												            // TODO: the size doesn't matter
-            Convertor.ConvertToPicture(Sample, ref bitmap);									// TODO: return bitmap as a result
-            return bitmap;
-        }
-        protected virtual void ProcesarMuestra(DPFP.Sample Sample)
-        {
-            // Este evento es llamado automaticamente por el SDK cada que se pase el dedo por el escaner
-            // En total, se manda a llamar 4 veces, las 4 veces requeridas por el SDK para generar el template.
-
-            // Convierte la muestra "Sample" a imagen, y la muestra en el picturebox. (Esta es la imagen de la huella como tal)
-            DrawPicture(ConvertSampleToBitmap(Sample));
-        }
-        private void DrawPicture(Bitmap bitmap)
-        {
-            pcbIMAGEFINGER.Invoke(new MethodInvoker(delegate { pcbIMAGEFINGER.Image = new Bitmap(bitmap, pcbIMAGEFINGER.Size); }));
-        }
-
+        
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             try
@@ -204,9 +186,18 @@ namespace SistemaDeIdentificacionUsuarios
         }
         private void pcbIMAGEFACE_Click(object sender, EventArgs e)
         {
-            frmFOTITO a = new frmFOTITO();
-            a.instance.Show();
-            this.Hide();
+            new frmFOTITO().ShowDialog(); //A tomar foto
+            try
+            {
+                pcbIMAGEFACE.Image = pic.Image; //si viene fotografia se pone
+            }
+            catch (NullReferenceException) //en caso de cancelada la captura recargo la imagen
+            {
+                pic.Image = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Imagenes\user.png");
+            }
+            //frmFOTITO a = new frmFOTITO();
+            //a.instance.Show();
+            //this.Hide();
         }
         private void pcbIMAGEFINGER_Click(object sender, EventArgs e)
         {
