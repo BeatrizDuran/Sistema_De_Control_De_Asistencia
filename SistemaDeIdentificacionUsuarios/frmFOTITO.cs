@@ -17,11 +17,22 @@ namespace SistemaDeIdentificacionUsuarios
         {
             InitializeComponent();
         }
+        #region Variables
         public static Image foto;
         private bool deviceExist = false;
         private FilterInfoCollection filter;
         private VideoCaptureDevice video = null;
+
+        //Ruta en la cual se crea el archivo de rostro en formato "jpeg".
+        string ruta = @"C:\Users\BeatrizDuran\Bibliotecas\Documentos\ImagenRostro\Rostro.jpeg";
+        string rutita;
+        #endregion variables
+
+        #region Singletón
+        //Variable utilizada en el método del Singleton(frmFOTITO).
         public static frmFOTITO _instance;
+
+        //Permite no abrir la ventana mas de una vez.
         public frmFOTITO instance
         {
             get
@@ -33,8 +44,9 @@ namespace SistemaDeIdentificacionUsuarios
                 return frmFOTITO._instance;
             }
         }
-        string ruta= @"C:\Users\BeatrizDuran\Bibliotecas\Documentos\ImagenRostro\Rostro.jpeg";
-        string rutita;
+        #endregion Singletón
+
+        #region Métodos de ejecucíón del programa
         //Listar las cámaras que reconoce el programa
         private void ListarCamaras()
         {
@@ -60,9 +72,7 @@ namespace SistemaDeIdentificacionUsuarios
             }
             cmbCAMARA.SelectedIndex = 0;
         }
-        /// <summary>
-        /// Cerrar el video después de haber capturado la imagen al cerrar la ventana
-        /// </summary>
+        // Cerrar el video después de haber capturado la imagen al cerrar la ventana.
         private void CerrarVideo()
         {
             if (!(video == null))
@@ -74,6 +84,7 @@ namespace SistemaDeIdentificacionUsuarios
                 }
             }
         }
+        //Iniciar la cámara seleccionada en el comboBox.
         private void btnINICIARmet()
         {
             btnINICIAR.Enabled = false;
@@ -98,6 +109,7 @@ namespace SistemaDeIdentificacionUsuarios
                 }
             }
         }
+        //Método el cuál permite la captura de la foto y valida si el campo de la imagen está en blanco.
         private void CapturarFoto()
         {
             if (pcbFOTO == null)
@@ -108,10 +120,9 @@ namespace SistemaDeIdentificacionUsuarios
             {
                 try
                 {
-                    //pBfoto.BackgroundImage.Save(@"C:\Users\monta\Desktop\prueba.jpeg", ImageFormat.Jpeg); 
-                    pcbFOTO.Image = foto;
-                    frmAdministrador admin = new frmAdministrador();
-                    admin.Show();
+                   // frmAdministrador.pic = new PictureBox();
+                    frmAdministrador.pic.Image = pcbFOTO.BackgroundImage;
+                    this.Close();
                 }
                 catch (Exception Error)
                 {
@@ -119,6 +130,7 @@ namespace SistemaDeIdentificacionUsuarios
                 }
             }
         }
+#endregion fin de los métodos
 
         private void CargarVideo(object sender, NewFrameEventArgs eventArgs)
         {

@@ -276,7 +276,6 @@ namespace SistemaDeIdentificacionUsuarios
                 }
         }
 
-       
         private void btnVERIFICAR_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Aun no funciona");
@@ -289,30 +288,17 @@ namespace SistemaDeIdentificacionUsuarios
         }
         private void btnREGISTRAR_Click(object sender, EventArgs e)
         {
-            SaveFileDialog save = new SaveFileDialog();
-            save.Filter = "Fingerprint Template File (*.fpt)|*.fpt";
-            if (save.ShowDialog() == DialogResult.OK)
-            {
-                using (FileStream fs = File.Open(save.FileName, FileMode.Create, FileAccess.Write))
-                {
-                    plantilla.Serialize(fs);
-                }
-            }
-            //try
-            //{
-            //    if (File.Exists(@"C:\Users\BeatrizDuran\Documents\ImagenHuella.jpeg"))
-            //    {
-            //        File.Delete(@"C:\Users\BeatrizDuran\Documents\ImagenHuella.jpeg");
-            //    }
-            //    else
-            //    {
-            //        pcbHUELLA.BackgroundImage.Save(@"C:\Users\BeatrizDuran\Documents\ImagenHuella.jpeg", ImageFormat.Jpeg);
-            //    }
-            //}
-            //catch (Exception error)
-            //{
-            //    MessageBox.Show(error.ToString());
-            //}
+            MemoryStream fingerprintData = new MemoryStream();
+            Enroller.Template.Serialize(fingerprintData);
+            fingerprintData.Position = 0;
+            // Leemos todos sus bytes
+            BinaryReader br = new BinaryReader(fingerprintData);
+            Byte[] bytes = br.ReadBytes((Int32)fingerprintData.Length);
+            //Desplegamos en pantalla por medio de un mensaje todo lo que representa la huella dactilar(hash)
+            //En una serie de bytes.
+            StreamWriter fs = File.CreateText(@"C:\Escritorio\codigoHuella.txt");
+                fs.WriteLine(string.Join(" ", bytes));
+           // MessageBox.Show(string.Join(" ", bytes));
         }
     }
 }
