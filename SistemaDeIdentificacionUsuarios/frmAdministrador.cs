@@ -29,6 +29,7 @@ namespace SistemaDeIdentificacionUsuarios
         string rutaFinger;
         public static Image huellita;
         public static PictureBox pic;
+
         #endregion
 
         Registro_de_huella huella = new Registro_de_huella();
