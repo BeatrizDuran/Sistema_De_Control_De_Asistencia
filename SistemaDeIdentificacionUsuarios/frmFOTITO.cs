@@ -22,10 +22,8 @@ namespace SistemaDeIdentificacionUsuarios
         private bool deviceExist = false;
         private FilterInfoCollection filter;
         private VideoCaptureDevice video = null;
-
-        //Ruta en la cual se crea el archivo de rostro en formato "jpeg".
-        string ruta = @"C:\Users\BeatrizDuran\Bibliotecas\Documentos\ImagenRostro\Rostro.jpeg";
-        string rutita;
+        
+       
         #endregion variables
 
         #region Singletón

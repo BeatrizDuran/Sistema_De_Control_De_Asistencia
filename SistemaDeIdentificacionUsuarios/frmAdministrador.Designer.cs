@@ -30,31 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministrador));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNAME = new System.Windows.Forms.Label();
             this.txtNOMBRE = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblPRIMERAPELLIDO = new System.Windows.Forms.Label();
+            this.lblSEGUNDOAPELLIDO = new System.Windows.Forms.Label();
             this.txtAPELLIDO1 = new System.Windows.Forms.TextBox();
             this.txtAPELLIDO2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblCORREO = new System.Windows.Forms.Label();
             this.txtEMAIL = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblPASSORIGINAL = new System.Windows.Forms.Label();
             this.txtPASSWORD = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblTIPOUSUARIO = new System.Windows.Forms.Label();
             this.cmbTIPOUSUARIO = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tsbAGREGAR = new System.Windows.Forms.ToolStripButton();
             this.tsbMODIFICAR = new System.Windows.Forms.ToolStripButton();
             this.tsbELIMINAR = new System.Windows.Forms.ToolStripButton();
             this.tsbCONSULTAR = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.tsbLIMPIAR = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.idiomasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.españolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbACERCADE = new System.Windows.Forms.ToolStripButton();
             this.tsbSALIR = new System.Windows.Forms.ToolStripButton();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblCONFIRMARPASS = new System.Windows.Forms.Label();
             this.txtCONPASSWORD = new System.Windows.Forms.TextBox();
             this.dgvAdmin = new System.Windows.Forms.DataGridView();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,27 +63,30 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblUSUARIO = new System.Windows.Forms.Label();
             this.lblPASSWORD = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.tmrCRONOMETRO = new System.Windows.Forms.Timer(this.components);
             this.pcbIMAGEFINGER = new System.Windows.Forms.PictureBox();
             this.pcbIMAGEFACE = new System.Windows.Forms.PictureBox();
+            this.tsbIDIOMA = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsmESPANISH = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmINGLES = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIMAGEFINGER)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIMAGEFACE)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblNAME
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 278);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre:";
+            this.lblNAME.AutoSize = true;
+            this.lblNAME.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNAME.Location = new System.Drawing.Point(26, 278);
+            this.lblNAME.Name = "lblNAME";
+            this.lblNAME.Size = new System.Drawing.Size(69, 20);
+            this.lblNAME.TabIndex = 0;
+            this.lblNAME.Text = "Nombre:";
             // 
             // txtNOMBRE
             // 
@@ -97,25 +97,25 @@
             this.txtNOMBRE.Size = new System.Drawing.Size(152, 26);
             this.txtNOMBRE.TabIndex = 1;
             // 
-            // label2
+            // lblPRIMERAPELLIDO
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 330);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Primer Apellido:";
+            this.lblPRIMERAPELLIDO.AutoSize = true;
+            this.lblPRIMERAPELLIDO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPRIMERAPELLIDO.Location = new System.Drawing.Point(26, 330);
+            this.lblPRIMERAPELLIDO.Name = "lblPRIMERAPELLIDO";
+            this.lblPRIMERAPELLIDO.Size = new System.Drawing.Size(118, 20);
+            this.lblPRIMERAPELLIDO.TabIndex = 2;
+            this.lblPRIMERAPELLIDO.Text = "Primer Apellido:";
             // 
-            // label3
+            // lblSEGUNDOAPELLIDO
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 381);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Segundo Apellido:";
+            this.lblSEGUNDOAPELLIDO.AutoSize = true;
+            this.lblSEGUNDOAPELLIDO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSEGUNDOAPELLIDO.Location = new System.Drawing.Point(25, 381);
+            this.lblSEGUNDOAPELLIDO.Name = "lblSEGUNDOAPELLIDO";
+            this.lblSEGUNDOAPELLIDO.Size = new System.Drawing.Size(138, 20);
+            this.lblSEGUNDOAPELLIDO.TabIndex = 3;
+            this.lblSEGUNDOAPELLIDO.Text = "Segundo Apellido:";
             // 
             // txtAPELLIDO1
             // 
@@ -135,15 +135,15 @@
             this.txtAPELLIDO2.Size = new System.Drawing.Size(152, 26);
             this.txtAPELLIDO2.TabIndex = 5;
             // 
-            // label4
+            // lblCORREO
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(191, 278);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Email:";
+            this.lblCORREO.AutoSize = true;
+            this.lblCORREO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCORREO.Location = new System.Drawing.Point(191, 278);
+            this.lblCORREO.Name = "lblCORREO";
+            this.lblCORREO.Size = new System.Drawing.Size(142, 20);
+            this.lblCORREO.TabIndex = 6;
+            this.lblCORREO.Text = "Correo electrónico:";
             // 
             // txtEMAIL
             // 
@@ -154,15 +154,15 @@
             this.txtEMAIL.Size = new System.Drawing.Size(239, 26);
             this.txtEMAIL.TabIndex = 7;
             // 
-            // label5
+            // lblPASSORIGINAL
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(450, 278);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Contraseña:";
+            this.lblPASSORIGINAL.AutoSize = true;
+            this.lblPASSORIGINAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPASSORIGINAL.Location = new System.Drawing.Point(450, 278);
+            this.lblPASSORIGINAL.Name = "lblPASSORIGINAL";
+            this.lblPASSORIGINAL.Size = new System.Drawing.Size(96, 20);
+            this.lblPASSORIGINAL.TabIndex = 8;
+            this.lblPASSORIGINAL.Text = "Contraseña:";
             // 
             // txtPASSWORD
             // 
@@ -174,15 +174,15 @@
             this.txtPASSWORD.TabIndex = 9;
             this.txtPASSWORD.UseSystemPasswordChar = true;
             // 
-            // label6
+            // lblTIPOUSUARIO
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(191, 329);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 20);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Tipo de usuario:";
+            this.lblTIPOUSUARIO.AutoSize = true;
+            this.lblTIPOUSUARIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTIPOUSUARIO.Location = new System.Drawing.Point(191, 329);
+            this.lblTIPOUSUARIO.Name = "lblTIPOUSUARIO";
+            this.lblTIPOUSUARIO.Size = new System.Drawing.Size(121, 20);
+            this.lblTIPOUSUARIO.TabIndex = 10;
+            this.lblTIPOUSUARIO.Text = "Tipo de usuario:";
             // 
             // cmbTIPOUSUARIO
             // 
@@ -203,13 +203,13 @@
             this.toolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.tsbAGREGAR,
             this.tsbMODIFICAR,
             this.tsbELIMINAR,
             this.tsbCONSULTAR,
-            this.toolStripButton2,
+            this.tsbLIMPIAR,
             this.toolStripSeparator1,
-            this.toolStripButton3,
+            this.tsbIDIOMA,
             this.tsbACERCADE,
             this.tsbSALIR});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -219,15 +219,15 @@
             this.toolStrip1.TabIndex = 15;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // tsbAGREGAR
             // 
-            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources._07_plus_161;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(86, 25);
-            this.toolStripButton1.Text = "Agregar";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.tsbAGREGAR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbAGREGAR.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources._07_plus_161;
+            this.tsbAGREGAR.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAGREGAR.Name = "tsbAGREGAR";
+            this.tsbAGREGAR.Size = new System.Drawing.Size(86, 25);
+            this.tsbAGREGAR.Text = "Agregar";
+            this.tsbAGREGAR.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // tsbMODIFICAR
             // 
@@ -259,43 +259,20 @@
             this.tsbCONSULTAR.Text = "Consultar";
             this.tsbCONSULTAR.Click += new System.EventHandler(this.tsbCONSULTAR_Click);
             // 
-            // toolStripButton2
+            // tsbLIMPIAR
             // 
-            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.broom_stick_3_20;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(83, 25);
-            this.toolStripButton2.Text = "Limpiar";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.tsbLIMPIAR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbLIMPIAR.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.broom_stick_3_20;
+            this.tsbLIMPIAR.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLIMPIAR.Name = "tsbLIMPIAR";
+            this.tsbLIMPIAR.Size = new System.Drawing.Size(83, 25);
+            this.tsbLIMPIAR.Text = "Limpiar";
+            this.tsbLIMPIAR.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStripButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.idiomasToolStripMenuItem,
-            this.españolToolStripMenuItem});
-            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(71, 25);
-            this.toolStripButton3.Text = "Idioma";
-            // 
-            // idiomasToolStripMenuItem
-            // 
-            this.idiomasToolStripMenuItem.Name = "idiomasToolStripMenuItem";
-            this.idiomasToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.idiomasToolStripMenuItem.Text = "Español";
-            // 
-            // españolToolStripMenuItem
-            // 
-            this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
-            this.españolToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.españolToolStripMenuItem.Text = "Ingles";
             // 
             // tsbACERCADE
             // 
@@ -316,15 +293,15 @@
             this.tsbSALIR.Text = "Salir";
             this.tsbSALIR.Click += new System.EventHandler(this.tsbSALIR_Click);
             // 
-            // label7
+            // lblCONFIRMARPASS
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(451, 330);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 20);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Confirmar contraseña:";
+            this.lblCONFIRMARPASS.AutoSize = true;
+            this.lblCONFIRMARPASS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCONFIRMARPASS.Location = new System.Drawing.Point(451, 330);
+            this.lblCONFIRMARPASS.Name = "lblCONFIRMARPASS";
+            this.lblCONFIRMARPASS.Size = new System.Drawing.Size(166, 20);
+            this.lblCONFIRMARPASS.TabIndex = 16;
+            this.lblCONFIRMARPASS.Text = "Confirmar contraseña:";
             // 
             // txtCONPASSWORD
             // 
@@ -382,7 +359,7 @@
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Email";
+            this.Column4.HeaderText = "Correo";
             this.Column4.Name = "Column4";
             // 
             // Column5
@@ -398,7 +375,7 @@
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Imagen face";
+            this.Column7.HeaderText = "Imagen del rostro";
             this.Column7.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Column7.Name = "Column7";
             this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -406,21 +383,21 @@
             // 
             // Column8
             // 
-            this.Column8.HeaderText = "Imagen huella";
+            this.Column8.HeaderText = "Imagen dactilar";
             this.Column8.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Column8.Name = "Column8";
             this.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // label8
+            // lblUSUARIO
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(191, 354);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(222, 20);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "(1.Administrador, 2. Operador)";
+            this.lblUSUARIO.AutoSize = true;
+            this.lblUSUARIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUSUARIO.Location = new System.Drawing.Point(191, 354);
+            this.lblUSUARIO.Name = "lblUSUARIO";
+            this.lblUSUARIO.Size = new System.Drawing.Size(222, 20);
+            this.lblUSUARIO.TabIndex = 19;
+            this.lblUSUARIO.Text = "(1.Administrador, 2. Operador)";
             // 
             // lblPASSWORD
             // 
@@ -452,6 +429,7 @@
             // pcbIMAGEFINGER
             // 
             this.pcbIMAGEFINGER.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbIMAGEFINGER.ErrorImage = global::SistemaDeIdentificacionUsuarios.Properties.Resources.huellita;
             this.pcbIMAGEFINGER.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.huellita;
             this.pcbIMAGEFINGER.Location = new System.Drawing.Point(751, 286);
             this.pcbIMAGEFINGER.Name = "pcbIMAGEFINGER";
@@ -464,6 +442,7 @@
             // pcbIMAGEFACE
             // 
             this.pcbIMAGEFACE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbIMAGEFACE.ErrorImage = global::SistemaDeIdentificacionUsuarios.Properties.Resources.user;
             this.pcbIMAGEFACE.Image = global::SistemaDeIdentificacionUsuarios.Properties.Resources.user1;
             this.pcbIMAGEFACE.Location = new System.Drawing.Point(623, 286);
             this.pcbIMAGEFACE.Name = "pcbIMAGEFACE";
@@ -473,6 +452,35 @@
             this.pcbIMAGEFACE.TabStop = false;
             this.pcbIMAGEFACE.Click += new System.EventHandler(this.pcbIMAGEFACE_Click);
             // 
+            // tsbIDIOMA
+            // 
+            this.tsbIDIOMA.BackColor = System.Drawing.SystemColors.Control;
+            this.tsbIDIOMA.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmESPANISH,
+            this.tsmINGLES});
+            this.tsbIDIOMA.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbIDIOMA.Name = "tsbIDIOMA";
+            this.tsbIDIOMA.Size = new System.Drawing.Size(71, 25);
+            this.tsbIDIOMA.Text = "Idioma";
+            this.tsbIDIOMA.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsbIDIOMA_DropDownItemClicked);
+            // 
+            // tsmESPANISH
+            // 
+            this.tsmESPANISH.Checked = true;
+            this.tsmESPANISH.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.tsmESPANISH.Name = "tsmESPANISH";
+            this.tsmESPANISH.Size = new System.Drawing.Size(180, 26);
+            this.tsmESPANISH.Text = "Español";
+            this.tsmESPANISH.Click += new System.EventHandler(this.tsmESPANISH_Click);
+            // 
+            // tsmINGLES
+            // 
+            this.tsmINGLES.Checked = true;
+            this.tsmINGLES.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.tsmINGLES.Name = "tsmINGLES";
+            this.tsmINGLES.Size = new System.Drawing.Size(180, 26);
+            this.tsmINGLES.Text = "Ingles";
+            // 
             // frmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,24 +489,24 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblPASSWORD);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblUSUARIO);
             this.Controls.Add(this.dgvAdmin);
             this.Controls.Add(this.txtCONPASSWORD);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblCONFIRMARPASS);
             this.Controls.Add(this.pcbIMAGEFINGER);
             this.Controls.Add(this.pcbIMAGEFACE);
             this.Controls.Add(this.cmbTIPOUSUARIO);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblTIPOUSUARIO);
             this.Controls.Add(this.txtPASSWORD);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblPASSORIGINAL);
             this.Controls.Add(this.txtEMAIL);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblCORREO);
             this.Controls.Add(this.txtAPELLIDO2);
             this.Controls.Add(this.txtAPELLIDO1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblSEGUNDOAPELLIDO);
+            this.Controls.Add(this.lblPRIMERAPELLIDO);
             this.Controls.Add(this.txtNOMBRE);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNAME);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdministrador";
@@ -517,35 +525,36 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNAME;
         private System.Windows.Forms.TextBox txtNOMBRE;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPRIMERAPELLIDO;
+        private System.Windows.Forms.Label lblSEGUNDOAPELLIDO;
         private System.Windows.Forms.TextBox txtAPELLIDO1;
         private System.Windows.Forms.TextBox txtAPELLIDO2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCORREO;
         private System.Windows.Forms.TextBox txtEMAIL;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPASSORIGINAL;
         private System.Windows.Forms.TextBox txtPASSWORD;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTIPOUSUARIO;
         private System.Windows.Forms.ComboBox cmbTIPOUSUARIO;
         private System.Windows.Forms.PictureBox pcbIMAGEFACE;
         private System.Windows.Forms.PictureBox pcbIMAGEFINGER;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsbAGREGAR;
         private System.Windows.Forms.ToolStripButton tsbMODIFICAR;
         private System.Windows.Forms.ToolStripButton tsbELIMINAR;
         private System.Windows.Forms.ToolStripButton tsbCONSULTAR;
         private System.Windows.Forms.ToolStripButton tsbSALIR;
         private System.Windows.Forms.ToolStripButton tsbACERCADE;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblCONFIRMARPASS;
         private System.Windows.Forms.TextBox txtCONPASSWORD;
         private System.Windows.Forms.DataGridView dgvAdmin;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblUSUARIO;
         private System.Windows.Forms.Label lblPASSWORD;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Timer tmrCRONOMETRO;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton tsbLIMPIAR;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -555,9 +564,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewImageColumn Column7;
         private System.Windows.Forms.DataGridViewImageColumn Column8;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripButton3;
-        private System.Windows.Forms.ToolStripMenuItem idiomasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem españolToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripDropDownButton tsbIDIOMA;
+        private System.Windows.Forms.ToolStripMenuItem tsmESPANISH;
+        private System.Windows.Forms.ToolStripMenuItem tsmINGLES;
     }
 }

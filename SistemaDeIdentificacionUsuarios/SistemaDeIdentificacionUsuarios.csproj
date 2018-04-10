@@ -138,6 +138,16 @@
     <Compile Include="PruebaHuellita.Designer.cs">
       <DependentUpon>PruebaHuellita.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecursosReutilizables\Idioma.EN.Designer.cs">
+      <DependentUpon>Idioma.EN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecursosReutilizables\Idioma.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Idioma.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AcercaDe.resx">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +178,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PruebaHuellita.resx">
       <DependentUpon>PruebaHuellita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosReutilizables\Idioma.EN.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Idioma.EN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosReutilizables\Idioma.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Idioma.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -201,6 +219,7 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
+    <None Include="Resources\huellita1.png" />
     <None Include="Resources\if_window-minimize_1954552.png" />
     <None Include="Resources\if_fullscreen_black_280259.png" />
     <None Include="Resources\if_00-ELASTOFONT-STORE-READY_close_2703079.png" />

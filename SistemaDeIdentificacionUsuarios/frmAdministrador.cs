@@ -10,7 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using libConnection;
 using MySql.Data.MySqlClient;
-using System.IO;
+using SistemaDeIdentificacionUsuarios.RecursosReutilizables;
+using System.Threading;
+using System.Globalization;
 
 namespace SistemaDeIdentificacionUsuarios
 {
@@ -110,8 +112,9 @@ namespace SistemaDeIdentificacionUsuarios
                        Image.FromFile(lector.GetString(7)),Image.FromFile(lector.GetString(8)));
                 }
                     con.Close();
-                   // pcbIMAGEFACE.Image = frmFOTITO.foto = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Documentos\ImagenRostro\Rostro.jpeg");
-             }
+                // pcbIMAGEFACE.Image = frmFOTITO.foto = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Documentos\ImagenRostro\Rostro.jpeg");         
+                CambioIdioma();
+            }
             catch (MySqlException errorcito)
             {
                 MessageBox.Show(errorcito.ToString());
@@ -134,6 +137,29 @@ namespace SistemaDeIdentificacionUsuarios
             lector = com.ExecuteReader();
             con.Close();
         }
+
+        private void CambioIdioma()
+        {
+            tsbAGREGAR.Text = Idioma.tsbAGREGAR;
+            tsbMODIFICAR.Text = Idioma.tsbMODIFICAR;
+            tsbELIMINAR.Text = Idioma.tsbELIMINAR;
+            tsbCONSULTAR.Text = Idioma.tsbCONSULTAR;
+            tsbLIMPIAR.Text = Idioma.tsbLIMPIAR;
+            tsbIDIOMA.Text = Idioma.tsbIDIOMA;
+            tsmESPANISH.Text = Idioma.tsmESPANISH;
+            tsmINGLES.Text = Idioma.tsmINGLES;
+            tsbACERCADE.Text = Idioma.tsbACERCADE;
+            tsbSALIR.Text = Idioma.tsbSALIR;
+            lblNAME.Text = Idioma.lblNAME;
+            lblPRIMERAPELLIDO.Text = Idioma.lblPRIMERAPELLIDO;
+            lblSEGUNDOAPELLIDO.Text = Idioma.lblSEGUNDOAPELLIDO;
+            lblCORREO.Text = Idioma.lblCORREO;
+            lblTIPOUSUARIO.Text = Idioma.lblTIPOUSUARIO;
+            lblUSUARIO.Text = Idioma.lblUSUARIO;
+            lblPASSORIGINAL.Text = Idioma.lblPASSORIGINAL;
+            lblCONFIRMARPASS.Text = Idioma.lblCONFIRMARPASS;
+            lblPASSWORD.Text = Idioma.lblPASSWORD;    
+        }
         
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -152,9 +178,9 @@ namespace SistemaDeIdentificacionUsuarios
                 {
                     if (txtPASSWORD.Text == txtCONPASSWORD.Text)
                     {
+                        con.Open();
                         rutaFace = rutaFace.Replace(@"\", @"\\");
                         rutaFinger = rutaFinger.Replace(@"\", @"\\");
-                        con.Open();
                         string query = "INSERT INTO users (name_users,lastname1_users,lastname2_users," +
                             "email_users,password_users,type_users,image_face_users,image_finger_users" +
                             ") VALUES ('" + txtNOMBRE.Text + "','" + txtAPELLIDO1.Text + "','" + txtAPELLIDO2.Text + "','" + txtEMAIL.Text + "'" +
@@ -168,10 +194,10 @@ namespace SistemaDeIdentificacionUsuarios
                     else
                     {
                         lblPASSWORD.Text = "Contraseña incorrecta";
-                        Timer t = new Timer();
+                       System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
                         t.Interval = 1000;
                         t.Tick += (s, a) => {
-                            ((Timer)s).Stop();
+                            ((System.Windows.Forms.Timer)s).Stop();
                             lblPASSWORD.Text = "";
 
                         };
@@ -188,14 +214,11 @@ namespace SistemaDeIdentificacionUsuarios
         private void pcbIMAGEFACE_Click(object sender, EventArgs e)
         {
             new frmFOTITO().ShowDialog(); //A tomar foto
-            try
-            {
                 pcbIMAGEFACE.Image = pic.Image; //si viene fotografia se pone
-            }
-            catch (NullReferenceException) //en caso de cancelada la captura recargo la imagen
-            {
-                pic.Image = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Imagenes\user.png");
-            }
+           // catch (NullReferenceException) //en caso de cancelada la captura recargo la imagen
+           // {
+             //   pic.Image = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Imagenes\user.png");
+           // }
             //frmFOTITO a = new frmFOTITO();
             //a.instance.Show();
             //this.Hide();
@@ -244,5 +267,17 @@ namespace SistemaDeIdentificacionUsuarios
             frmAdministrador_Load(sender, e);
         }
         private void tsbCONSULTAR_Click(object sender, EventArgs e) => consultar();
+
+        private void tsbIDIOMA_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            //Thread.CurrentThread.CurrentUICulture = new
+            //CultureInfo((string)tsmESPANISH.Checked.ToString());
+           // CambioIdioma();
+        }
+
+        private void tsmESPANISH_Click(object sender, EventArgs e)
+        {
+            CambioIdioma();
+        }
     }
 }

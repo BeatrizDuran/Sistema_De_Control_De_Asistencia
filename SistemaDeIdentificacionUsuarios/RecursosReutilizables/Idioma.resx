@@ -117,65 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="broom_stick_3-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\broom_stick_3-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblCONFIRMARPASS" xml:space="preserve">
+    <value>Confirmar contraseña</value>
   </data>
-  <data name="if_00-ELASTOFONT-STORE-READY_close_2703079" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_00-ELASTOFONT-STORE-READY_close_2703079.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblCORREO" xml:space="preserve">
+    <value>Correo Electrónico:</value>
   </data>
-  <data name="trash-01-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trash-01-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblNAME" xml:space="preserve">
+    <value>Nombre:</value>
   </data>
-  <data name="07_plus-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\07_plus-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblPASSORIGINAL" xml:space="preserve">
+    <value>Contraseña:</value>
   </data>
-  <data name="if_window-minimize_1954552" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_window-minimize_1954552.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblPASSWORD" xml:space="preserve">
+    <value>Contraseña incorrecta</value>
   </data>
-  <data name="acerca de" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\acerca de.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblPRIMERAPELLIDO" xml:space="preserve">
+    <value>Primer Apellido:</value>
   </data>
-  <data name="012_restart-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\012_restart-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblSEGUNDOAPELLIDO" xml:space="preserve">
+    <value>Segundo Apellido:</value>
   </data>
-  <data name="if_free-09_463017" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_free-09_463017.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblTIPOUSUARIO" xml:space="preserve">
+    <value>Tipo de Usuario:</value>
   </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblUSUARIO" xml:space="preserve">
+    <value>(1. Administrador, 2. Operador)</value>
   </data>
-  <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsbACERCADE" xml:space="preserve">
+    <value>Acerca de</value>
   </data>
-  <data name="if_free-09_4630171" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_free-09_4630171.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsbAGREGAR" xml:space="preserve">
+    <value>Agregar</value>
   </data>
-  <data name="thin-1570_exit_login_import-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thin-1570_exit_login_import-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsbCONSULTAR" xml:space="preserve">
+    <value>Consultar</value>
   </data>
-  <data name="283-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\283-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsbELIMINAR" xml:space="preserve">
+    <value>Eliminar</value>
   </data>
-  <data name="permiso_administrador" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\permiso_administrador.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsbIDIOMA" xml:space="preserve">
+    <value>Idioma</value>
   </data>
-  <data name="if_fullscreen_black_280259" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_fullscreen_black_280259.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsbLIMPIAR" xml:space="preserve">
+    <value>Limpiar</value>
   </data>
-  <data name="sublogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sublogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsbMODIFICAR" xml:space="preserve">
+    <value>Modificar</value>
   </data>
-  <data name="07_plus-161" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\07_plus-161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsbSALIR" xml:space="preserve">
+    <value>Salir</value>
   </data>
-  <data name="09_search-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\09_search-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsmESPANISH" xml:space="preserve">
+    <value>Español</value>
   </data>
-  <data name="huellita" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\huellita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="huellita1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\huellita1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tsmINGLES" xml:space="preserve">
+    <value>Ingles</value>
   </data>
 </root>
