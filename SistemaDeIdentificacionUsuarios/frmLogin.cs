@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using SistemaDeIdentificacionUsuarios.RecursosReutilizables;
 
 namespace SistemaDeIdentificacionUsuarios
 {
@@ -58,7 +59,23 @@ namespace SistemaDeIdentificacionUsuarios
             }
 
         }
+        private void CambioIdioma()
+        {
+            btnACCEDER.Text = Idioma.btnACCEDER;
+            btnSALIR.Text = Idioma.btnSALIR;
+            lblTITULO1.Text = Idioma.lblTITULO1;
+            lblTITULO2.Text = Idioma.lblTITULO2;
+            lblNOMBREUSUARIO.Text = Idioma.lblNOMBREUSUARIO;
+            lblINGRESARPASS.Text = Idioma.lblINGRESARPASS;
+        }
+
         private void btnACCEDER_Click(object sender, EventArgs e) => ACCEDER();
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            CambioIdioma();
+        }
+
         private void button1_Click(object sender, EventArgs e) => this.Close();
     }
 }

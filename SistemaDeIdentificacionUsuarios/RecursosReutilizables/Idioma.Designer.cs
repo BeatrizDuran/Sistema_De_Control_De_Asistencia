@@ -61,6 +61,141 @@ namespace SistemaDeIdentificacionUsuarios.RecursosReutilizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Acceder.
+        /// </summary>
+        public static string btnACCEDER {
+            get {
+                return ResourceManager.GetString("btnACCEDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Capturar.
+        /// </summary>
+        public static string btnCAPTURAR {
+            get {
+                return ResourceManager.GetString("btnCAPTURAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Iniciar.
+        /// </summary>
+        public static string btnINICIAR {
+            get {
+                return ResourceManager.GetString("btnINICIAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Capturar.
+        /// </summary>
+        public static string btnREGISTRAR {
+            get {
+                return ResourceManager.GetString("btnREGISTRAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Salir.
+        /// </summary>
+        public static string btnSALIR {
+            get {
+                return ResourceManager.GetString("btnSALIR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Verificar.
+        /// </summary>
+        public static string btnVERIFICAR {
+            get {
+                return ResourceManager.GetString("btnVERIFICAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre.
+        /// </summary>
+        public static string Column1 {
+            get {
+                return ResourceManager.GetString("Column1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Primer apellido.
+        /// </summary>
+        public static string Column2 {
+            get {
+                return ResourceManager.GetString("Column2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Segundo apellido.
+        /// </summary>
+        public static string Column3 {
+            get {
+                return ResourceManager.GetString("Column3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Correo.
+        /// </summary>
+        public static string Column4 {
+            get {
+                return ResourceManager.GetString("Column4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tipo de usuario.
+        /// </summary>
+        public static string Column6 {
+            get {
+                return ResourceManager.GetString("Column6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Imagen del rostro.
+        /// </summary>
+        public static string Column7 {
+            get {
+                return ResourceManager.GetString("Column7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Imagen dactilar.
+        /// </summary>
+        public static string Column8 {
+            get {
+                return ResourceManager.GetString("Column8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Bienvenid@, favor de escanear la huella dactilar..
+        /// </summary>
+        public static string lblBIENVENIDA {
+            get {
+                return ResourceManager.GetString("lblBIENVENIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Escoge la cámara:.
+        /// </summary>
+        public static string lblCOMENTARIO {
+            get {
+                return ResourceManager.GetString("lblCOMENTARIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Confirmar contraseña.
         /// </summary>
         public static string lblCONFIRMARPASS {
@@ -79,11 +214,47 @@ namespace SistemaDeIdentificacionUsuarios.RecursosReutilizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Fecha.
+        /// </summary>
+        public static string lblDATE {
+            get {
+                return ResourceManager.GetString("lblDATE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hora.
+        /// </summary>
+        public static string lblHOUR {
+            get {
+                return ResourceManager.GetString("lblHOUR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Contraseña:.
+        /// </summary>
+        public static string lblINGRESARPASS {
+            get {
+                return ResourceManager.GetString("lblINGRESARPASS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Nombre:.
         /// </summary>
         public static string lblNAME {
             get {
                 return ResourceManager.GetString("lblNAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Usuario:.
+        /// </summary>
+        public static string lblNOMBREUSUARIO {
+            get {
+                return ResourceManager.GetString("lblNOMBREUSUARIO", resourceCulture);
             }
         }
         
@@ -129,6 +300,42 @@ namespace SistemaDeIdentificacionUsuarios.RecursosReutilizables {
         public static string lblTIPOUSUARIO {
             get {
                 return ResourceManager.GetString("lblTIPOUSUARIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Capture la foto.
+        /// </summary>
+        public static string lblTITULO {
+            get {
+                return ResourceManager.GetString("lblTITULO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sistema de Control de Asistencia.
+        /// </summary>
+        public static string lblTITULO1 {
+            get {
+                return ResourceManager.GetString("lblTITULO1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sesión Administrador.
+        /// </summary>
+        public static string lblTITULO2 {
+            get {
+                return ResourceManager.GetString("lblTITULO2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Capture su huella dactilar.
+        /// </summary>
+        public static string lblTITULODACTILAR {
+            get {
+                return ResourceManager.GetString("lblTITULODACTILAR", resourceCulture);
             }
         }
         
@@ -210,6 +417,15 @@ namespace SistemaDeIdentificacionUsuarios.RecursosReutilizables {
         public static string tsbSALIR {
             get {
                 return ResourceManager.GetString("tsbSALIR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Selección del idioma:.
+        /// </summary>
+        public static string tsbSELECCIONIDIOMA {
+            get {
+                return ResourceManager.GetString("tsbSELECCIONIDIOMA", resourceCulture);
             }
         }
         

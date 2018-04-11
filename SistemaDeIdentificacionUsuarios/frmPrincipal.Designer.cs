@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblHOUR = new System.Windows.Forms.Label();
+            this.lblDATE = new System.Windows.Forms.Label();
             this.lblHORA = new System.Windows.Forms.Label();
             this.lblFECHA = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblBIENVENIDA = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,25 +64,25 @@
             this.loginToolStripMenuItem.Text = "login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
-            // label1
+            // lblHOUR
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(400, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 39);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Hora";
+            this.lblHOUR.AutoSize = true;
+            this.lblHOUR.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHOUR.Location = new System.Drawing.Point(400, 28);
+            this.lblHOUR.Name = "lblHOUR";
+            this.lblHOUR.Size = new System.Drawing.Size(92, 39);
+            this.lblHOUR.TabIndex = 2;
+            this.lblHOUR.Text = "Hora";
             // 
-            // label2
+            // lblDATE
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(400, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 39);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Fecha";
+            this.lblDATE.AutoSize = true;
+            this.lblDATE.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDATE.Location = new System.Drawing.Point(400, 104);
+            this.lblDATE.Name = "lblDATE";
+            this.lblDATE.Size = new System.Drawing.Size(113, 39);
+            this.lblDATE.TabIndex = 3;
+            this.lblDATE.Text = "Fecha";
             // 
             // lblHORA
             // 
@@ -116,9 +116,9 @@
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblFECHA);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblHOUR);
             this.panel1.Controls.Add(this.lblHORA);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblDATE);
             this.panel1.Location = new System.Drawing.Point(2, 38);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 204);
@@ -134,15 +134,15 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
+            // lblBIENVENIDA
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(329, 264);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(687, 39);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Bienvenid@, por favor de escanea tu huella";
+            this.lblBIENVENIDA.AutoSize = true;
+            this.lblBIENVENIDA.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBIENVENIDA.Location = new System.Drawing.Point(329, 264);
+            this.lblBIENVENIDA.Name = "lblBIENVENIDA";
+            this.lblBIENVENIDA.Size = new System.Drawing.Size(760, 39);
+            this.lblBIENVENIDA.TabIndex = 7;
+            this.lblBIENVENIDA.Text = "Bienvenid@, favor de escanear la huella dactilar";
             // 
             // panel2
             // 
@@ -159,7 +159,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(959, 463);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblBIENVENIDA);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -183,13 +183,13 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblHOUR;
+        private System.Windows.Forms.Label lblDATE;
         private System.Windows.Forms.Label lblHORA;
         private System.Windows.Forms.Label lblFECHA;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblBIENVENIDA;
         private System.Windows.Forms.Panel panel2;
     }
 }

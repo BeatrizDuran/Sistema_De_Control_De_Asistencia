@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using System.IO;
+using SistemaDeIdentificacionUsuarios.RecursosReutilizables;
 
 namespace SistemaDeIdentificacionUsuarios
 {
@@ -128,6 +129,15 @@ namespace SistemaDeIdentificacionUsuarios
                 }
             }
         }
+
+        private void CambioIdioma()
+        {
+            btnCAPTURAR.Text = Idioma.btnCAPTURAR;
+            btnINICIAR.Text = Idioma.btnINICIAR;
+            lblCOMENTARIO.Text = Idioma.lblCOMENTARIO;
+            lblTITULO.Text = Idioma.lblTITULO;
+            
+        }
 #endregion fin de los métodos
 
         private void CargarVideo(object sender, NewFrameEventArgs eventArgs)
@@ -138,31 +148,7 @@ namespace SistemaDeIdentificacionUsuarios
         private void frmFOTITO_Load(object sender, EventArgs e)
         {
            ListarCamaras();
-           // // Cargamos los dispositivos de video
-           // filter = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-
-           // //// Y por cada dispositivo detectado, lo agregamos a un combobox (ahora ya no es visible para el usuario)
-           // foreach (FilterInfo Dispositivo in filter)
-           // {
-           //     cmbCAMARA.Items.Add(Dispositivo.Name);
-           // }
-           // //// Seleccionamos el primer dispositivo
-           // cmbCAMARA.SelectedIndex = 0;
-           // //// Inicializamos el dispositivo
-           // video = new VideoCaptureDevice();
-
-           // //// Y creamos el handler para comenzar a hacer el stream de video
-           // try
-           // {
-           //     video = new VideoCaptureDevice(filter[cmbCAMARA.SelectedIndex].MonikerString);
-           //     video.NewFrame += FrameFinal_NewFrame;
-
-           //     video.Start();
-           // }
-           // catch (Exception ex)
-           // {
-           //     MessageBox.Show(ex.Message);
-           // }
+            CambioIdioma();
         }
         private void frmFOTITO_FormClosed(object sender, FormClosedEventArgs e) => CerrarVideo();
         private void btnINICIAR_Click(object sender, EventArgs e)

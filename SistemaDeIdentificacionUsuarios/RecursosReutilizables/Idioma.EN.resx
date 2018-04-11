@@ -117,14 +117,71 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnACCEDER" xml:space="preserve">
+    <value>To access</value>
+  </data>
+  <data name="btnCAPTURAR" xml:space="preserve">
+    <value>Capture</value>
+  </data>
+  <data name="btnINICIAR" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="btnREGISTRAR" xml:space="preserve">
+    <value>Capture</value>
+  </data>
+  <data name="btnSALIR" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="btnVERIFICAR" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="Column1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Column2" xml:space="preserve">
+    <value>Surname </value>
+  </data>
+  <data name="Column3" xml:space="preserve">
+    <value>Second surname</value>
+  </data>
+  <data name="Column4" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Column6" xml:space="preserve">
+    <value>Type of user</value>
+  </data>
+  <data name="Column7" xml:space="preserve">
+    <value>Face image</value>
+  </data>
+  <data name="Column8" xml:space="preserve">
+    <value>Fingerprint</value>
+  </data>
+  <data name="lblBIENVENIDA" xml:space="preserve">
+    <value>Welcome, please scan the fingerprint.</value>
+  </data>
+  <data name="lblCOMENTARIO" xml:space="preserve">
+    <value>Choose the camera:</value>
+  </data>
   <data name="lblCONFIRMARPASS" xml:space="preserve">
     <value>Confirm password:</value>
   </data>
   <data name="lblCORREO" xml:space="preserve">
     <value>E-mail:</value>
   </data>
+  <data name="lblDATE" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="lblHOUR" xml:space="preserve">
+    <value>Hour</value>
+  </data>
+  <data name="lblINGRESARPASS" xml:space="preserve">
+    <value>Password:</value>
+  </data>
   <data name="lblNAME" xml:space="preserve">
     <value>Name:</value>
+  </data>
+  <data name="lblNOMBREUSUARIO" xml:space="preserve">
+    <value>User:</value>
   </data>
   <data name="lblPASSORIGINAL" xml:space="preserve">
     <value>Password:</value>
@@ -140,6 +197,18 @@
   </data>
   <data name="lblTIPOUSUARIO" xml:space="preserve">
     <value>Type of user:</value>
+  </data>
+  <data name="lblTITULO" xml:space="preserve">
+    <value>Capture the photo</value>
+  </data>
+  <data name="lblTITULO1" xml:space="preserve">
+    <value>Assistance Control System</value>
+  </data>
+  <data name="lblTITULO2" xml:space="preserve">
+    <value>Admin session</value>
+  </data>
+  <data name="lblTITULODACTILAR" xml:space="preserve">
+    <value>Capture your fingerprint</value>
   </data>
   <data name="lblUSUARIO" xml:space="preserve">
     <value>(1. Administrator, 2. Operator)</value>
@@ -164,6 +233,9 @@
   </data>
   <data name="tsbSALIR" xml:space="preserve">
     <value>Exit</value>
+  </data>
+  <data name="tsbSELECCIONIDIOMA" xml:space="preserve">
+    <value>Language selection:</value>
   </data>
   <data name="tsmESPANISH" xml:space="preserve">
     <value>Espanish</value>

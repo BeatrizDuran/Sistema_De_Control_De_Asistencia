@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTITULODACTILAR = new System.Windows.Forms.Label();
             this.btnVERIFICAR = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pcbHUELLA = new System.Windows.Forms.PictureBox();
@@ -41,15 +41,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbHUELLA)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTITULODACTILAR
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Capture su huella dactilar";
+            this.lblTITULODACTILAR.AutoSize = true;
+            this.lblTITULODACTILAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTITULODACTILAR.Location = new System.Drawing.Point(68, 32);
+            this.lblTITULODACTILAR.Name = "lblTITULODACTILAR";
+            this.lblTITULODACTILAR.Size = new System.Drawing.Size(188, 20);
+            this.lblTITULODACTILAR.TabIndex = 0;
+            this.lblTITULODACTILAR.Text = "Capture su huella dactilar";
             // 
             // btnVERIFICAR
             // 
@@ -102,7 +102,7 @@
             // 
             this.StatusLine.AutoSize = true;
             this.StatusLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatusLine.Location = new System.Drawing.Point(84, 334);
+            this.StatusLine.Location = new System.Drawing.Point(27, 334);
             this.StatusLine.Name = "StatusLine";
             this.StatusLine.Size = new System.Drawing.Size(17, 20);
             this.StatusLine.TabIndex = 5;
@@ -120,7 +120,7 @@
             // 
             this.lblEstatus.AutoSize = true;
             this.lblEstatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstatus.Location = new System.Drawing.Point(42, 333);
+            this.lblEstatus.Location = new System.Drawing.Point(27, 334);
             this.lblEstatus.Name = "lblEstatus";
             this.lblEstatus.Size = new System.Drawing.Size(0, 21);
             this.lblEstatus.TabIndex = 95;
@@ -159,7 +159,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnVERIFICAR);
             this.Controls.Add(this.pcbHUELLA);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTITULODACTILAR);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registro_de_huella";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -173,7 +173,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTITULODACTILAR;
         private System.Windows.Forms.PictureBox pcbHUELLA;
         private System.Windows.Forms.Button btnVERIFICAR;
         private System.Windows.Forms.Button button1;

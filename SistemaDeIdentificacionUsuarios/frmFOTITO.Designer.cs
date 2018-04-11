@@ -31,11 +31,11 @@
             this.cmbCAMARA = new System.Windows.Forms.ComboBox();
             this.btnINICIAR = new System.Windows.Forms.Button();
             this.btnCAPTURAR = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTITULO = new System.Windows.Forms.Label();
             this.btnMINI = new System.Windows.Forms.Button();
             this.btnSALIR = new System.Windows.Forms.Button();
             this.pcbFOTO = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCOMENTARIO = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFOTO)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,15 +74,15 @@
             this.btnCAPTURAR.UseVisualStyleBackColor = true;
             this.btnCAPTURAR.Click += new System.EventHandler(this.btnCAPTURAR_Click);
             // 
-            // label1
+            // lblTITULO
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 31);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Capture la foto";
+            this.lblTITULO.AutoSize = true;
+            this.lblTITULO.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTITULO.Location = new System.Drawing.Point(167, 22);
+            this.lblTITULO.Name = "lblTITULO";
+            this.lblTITULO.Size = new System.Drawing.Size(192, 31);
+            this.lblTITULO.TabIndex = 5;
+            this.lblTITULO.Text = "Capture la foto";
             // 
             // btnMINI
             // 
@@ -121,24 +121,24 @@
             this.pcbFOTO.TabIndex = 2;
             this.pcbFOTO.TabStop = false;
             // 
-            // label2
+            // lblCOMENTARIO
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 24);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Escoge una cámara:";
+            this.lblCOMENTARIO.AutoSize = true;
+            this.lblCOMENTARIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCOMENTARIO.Location = new System.Drawing.Point(30, 81);
+            this.lblCOMENTARIO.Name = "lblCOMENTARIO";
+            this.lblCOMENTARIO.Size = new System.Drawing.Size(184, 24);
+            this.lblCOMENTARIO.TabIndex = 8;
+            this.lblCOMENTARIO.Text = "Escoge una cámara:";
             // 
             // frmFOTITO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 481);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCOMENTARIO);
             this.Controls.Add(this.btnMINI);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTITULO);
             this.Controls.Add(this.btnSALIR);
             this.Controls.Add(this.btnCAPTURAR);
             this.Controls.Add(this.pcbFOTO);
@@ -163,8 +163,8 @@
         private System.Windows.Forms.PictureBox pcbFOTO;
         private System.Windows.Forms.Button btnCAPTURAR;
         private System.Windows.Forms.Button btnSALIR;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTITULO;
         private System.Windows.Forms.Button btnMINI;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCOMENTARIO;
     }
 }

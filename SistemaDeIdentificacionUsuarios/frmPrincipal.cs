@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaDeIdentificacionUsuarios.RecursosReutilizables;
 
 namespace SistemaDeIdentificacionUsuarios
 {
@@ -28,6 +29,12 @@ namespace SistemaDeIdentificacionUsuarios
                 return frmPrincipal._instance;
             }
         }
+        private void CambioIdioma()
+        {
+            lblBIENVENIDA.Text = Idioma.lblBIENVENIDA;
+            lblDATE.Text = Idioma.lblDATE;
+            lblHOUR.Text = Idioma.lblHOUR;
+        }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e) => new frmLogin().ShowDialog();
         private void timer1_Tick(object sender, EventArgs e)
@@ -39,6 +46,7 @@ namespace SistemaDeIdentificacionUsuarios
         {
             lblHORA.Text = DateTime.Now.ToLongTimeString();
             lblFECHA.Text = DateTime.Now.ToLongDateString();
+            CambioIdioma();
         }
     }
 }

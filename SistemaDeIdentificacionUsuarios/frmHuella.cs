@@ -12,6 +12,7 @@ using Neurotec.Biometrics;
 using DPFP;
 using System.IO;
 using MySql.Data.MySqlClient;
+using SistemaDeIdentificacionUsuarios.RecursosReutilizables;
 
 
 namespace SistemaDeIdentificacionUsuarios
@@ -54,6 +55,13 @@ namespace SistemaDeIdentificacionUsuarios
 
             if (message.Msg == WM_NCHITTEST && (int)message.Result == HTCLIENT)
                 message.Result = (IntPtr)HTCAPTION;
+        }
+
+        private void CambioIdioma()
+        {
+            btnREGISTRAR.Text = Idioma.btnREGISTRAR;
+            btnVERIFICAR.Text = Idioma.btnVERIFICAR;
+            lblTITULODACTILAR.Text = Idioma.lblTITULODACTILAR;
         }
 
         // Inicializar proceso de captura
@@ -280,11 +288,18 @@ namespace SistemaDeIdentificacionUsuarios
         {
             MessageBox.Show("Aun no funciona");
         }
-        private void button1_Click(object sender, EventArgs e) => this.Close();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmAdministrador admin = new frmAdministrador();
+            admin.ShowDialog();
+        }
+
         private void Registro_de_huella_Load(object sender, EventArgs e)
         {
             Init();
             Start();
+            CambioIdioma();
         }
         private void btnREGISTRAR_Click(object sender, EventArgs e)
         {

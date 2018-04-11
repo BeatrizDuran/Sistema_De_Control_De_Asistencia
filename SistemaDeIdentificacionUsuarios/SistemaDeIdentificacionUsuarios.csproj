@@ -132,12 +132,6 @@
     <Compile Include="frmHuella.Designer.cs">
       <DependentUpon>frmHuella.cs</DependentUpon>
     </Compile>
-    <Compile Include="PruebaHuellita.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PruebaHuellita.Designer.cs">
-      <DependentUpon>PruebaHuellita.cs</DependentUpon>
-    </Compile>
     <Compile Include="RecursosReutilizables\Idioma.EN.Designer.cs">
       <DependentUpon>Idioma.EN.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -175,9 +169,6 @@
     </Compile>
     <EmbeddedResource Include="frmHuella.resx">
       <DependentUpon>frmHuella.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PruebaHuellita.resx">
-      <DependentUpon>PruebaHuellita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosReutilizables\Idioma.EN.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

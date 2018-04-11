@@ -99,6 +99,7 @@ namespace SistemaDeIdentificacionUsuarios
             {
                 //huella.plantilla = pcbIMAGEFINGER.Image;
                 //pcbIMAGEFACE.Image = pic;
+                lblPASSWORD.Text = "";
                 dgvAdmin.Rows.Clear();
                 con.Open();
                 string query = "SELECT * FROM users";
@@ -111,8 +112,7 @@ namespace SistemaDeIdentificacionUsuarios
                        lector.GetString(5), lector.GetString(6),
                        Image.FromFile(lector.GetString(7)),Image.FromFile(lector.GetString(8)));
                 }
-                    con.Close();
-                // pcbIMAGEFACE.Image = frmFOTITO.foto = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Documentos\ImagenRostro\Rostro.jpeg");         
+                con.Close();
                 CambioIdioma();
             }
             catch (MySqlException errorcito)
@@ -120,6 +120,7 @@ namespace SistemaDeIdentificacionUsuarios
                 MessageBox.Show(errorcito.ToString());
             }
            }
+
         private void consultar()
         {
             con.Open();
@@ -146,8 +147,6 @@ namespace SistemaDeIdentificacionUsuarios
             tsbCONSULTAR.Text = Idioma.tsbCONSULTAR;
             tsbLIMPIAR.Text = Idioma.tsbLIMPIAR;
             tsbIDIOMA.Text = Idioma.tsbIDIOMA;
-            tsmESPANISH.Text = Idioma.tsmESPANISH;
-            tsmINGLES.Text = Idioma.tsmINGLES;
             tsbACERCADE.Text = Idioma.tsbACERCADE;
             tsbSALIR.Text = Idioma.tsbSALIR;
             lblNAME.Text = Idioma.lblNAME;
@@ -158,7 +157,15 @@ namespace SistemaDeIdentificacionUsuarios
             lblUSUARIO.Text = Idioma.lblUSUARIO;
             lblPASSORIGINAL.Text = Idioma.lblPASSORIGINAL;
             lblCONFIRMARPASS.Text = Idioma.lblCONFIRMARPASS;
-            lblPASSWORD.Text = Idioma.lblPASSWORD;    
+            lblPASSWORD.Text = Idioma.lblPASSWORD;
+            Column1.HeaderText = Idioma.Column1;
+            Column2.HeaderText = Idioma.Column2;
+            Column3.HeaderText = Idioma.Column3;
+            Column4.HeaderText = Idioma.Column4;
+            Column6.HeaderText = Idioma.Column6;
+            Column7.HeaderText = Idioma.Column7;
+            Column8.HeaderText = Idioma.Column8;
+            tsbSELECCIONIDIOMA.Text = Idioma.tsbSELECCIONIDIOMA;
         }
         
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -214,7 +221,7 @@ namespace SistemaDeIdentificacionUsuarios
         private void pcbIMAGEFACE_Click(object sender, EventArgs e)
         {
             new frmFOTITO().ShowDialog(); //A tomar foto
-                pcbIMAGEFACE.Image = pic.Image; //si viene fotografia se pone
+              //  pcbIMAGEFACE.Image = pic.Image; //si viene fotografia se pone
            // catch (NullReferenceException) //en caso de cancelada la captura recargo la imagen
            // {
              //   pic.Image = Image.FromFile(@"C:\Users\BeatrizDuran\Bibliotecas\Imagenes\user.png");
@@ -222,11 +229,13 @@ namespace SistemaDeIdentificacionUsuarios
             //frmFOTITO a = new frmFOTITO();
             //a.instance.Show();
             //this.Hide();
+
         }
         private void pcbIMAGEFINGER_Click(object sender, EventArgs e)
         {
           Registro_de_huella r =  new Registro_de_huella();
-            r.instance.Show();
+            // r.instance.Show();
+            r.ShowDialog();
             this.Hide();
         }
         private void dgvAdmin_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -268,15 +277,11 @@ namespace SistemaDeIdentificacionUsuarios
         }
         private void tsbCONSULTAR_Click(object sender, EventArgs e) => consultar();
 
-        private void tsbIDIOMA_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+     
+        private void tsbIDIOMA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Thread.CurrentThread.CurrentUICulture = new
-            //CultureInfo((string)tsmESPANISH.Checked.ToString());
-           // CambioIdioma();
-        }
-
-        private void tsmESPANISH_Click(object sender, EventArgs e)
-        {
+            Thread.CurrentThread.CurrentUICulture = new
+           CultureInfo((string)tsbIDIOMA.SelectedItem);
             CambioIdioma();
         }
     }
